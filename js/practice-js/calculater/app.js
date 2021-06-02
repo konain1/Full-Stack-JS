@@ -9,5 +9,23 @@ for(let btn of buttons){
         let btnText = e.target.innerText;
 
         console.log(btnText);
+
+        if(btnText == 'x'){
+            screen.value += '*'
+            console.log(screen.value)
+        }
+        else if(btnText == 'C'){
+            screen.value = "";
+        }
+        else if(btnText === '='){
+            try{
+            screen.value = eval(screen.value)
+            }catch(e){
+                screen.value = 'invalid selection'
+            }
+        }
+        else {
+            screen.value += btnText
+        }
     })
 }
