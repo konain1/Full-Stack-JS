@@ -20,3 +20,4 @@ function isVeg(food){
 // let order = menu.filter(isVeg);S
 let nonVeg = menu.filter(isNonVeg)
 console.log(nonVeg)
+console.log("Update")
