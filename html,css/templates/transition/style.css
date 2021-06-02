@@ -1,0 +1,33 @@
+section {
+    width: 100%;
+    height: 70vh;
+    border: 1px solid red;
+  
+}
+
+div {
+    background-color: blueviolet;
+    height: 20%;
+    border: 1px solid white;
+    width: 10%;
+    transition-duration: 4s;
+    transition-property: all;
+    transition-delay: 1s;
+    
+
+}
+section:hover  div:nth-child(1){
+    transform: rotate(-90deg);
+    transform: translateX(450px);
+    background-color: violet;
+    border:40px dashed green;
+}
+section:hover  div:nth-child(2){
+    transform: rotate(45deg);
+    /* transform: translateX(450px); */
+}
+section:hover  div:nth-child(3){
+    transform: rotate(90deg);
+    transform: translateY(450px);
+
+}

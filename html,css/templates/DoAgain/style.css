@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+section{
+    height: 70vh;
+    width: 70%;
+    border :1px solid grey;
+    text-align: center;
+}
+.wrap {
+    width: 240px;
+    height: 240px;
+    background-color: aqua;
+    margin: 20% 10%;
+    /* position: absolute; */
+    border-radius: 50%;
+    transition-duration: 1s;
+    transform-style: preserve-3d;
+    
+}
+p {
+   
+    padding: 40px;
+}
+
+.side-a , .side-b {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    backface-visibility: hidden;
+    
+}
+
+.side-a {
+    /* width: 100%;
+    height: 100%; */
+    background-color: bisque;
+    border-radius: 50%;
+    z-index: 1;
+    
+    
+}
+.side-b {
+    /* width: 100%;
+    height: 100%; */
+    background-color: rgb(58, 34, 5);
+    /* border-radius: 50%;   */
+    color: white;
+    transform: rotateY(180deg);
+
+    
+}
+
+.wrap:hover {
+    transform: rotateY(180deg);
+    border-radius: 0%;
+    
+}

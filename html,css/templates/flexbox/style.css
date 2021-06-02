@@ -1,0 +1,24 @@
+section {
+    border:1px double pink;
+    display: flex;
+    height: 40vh;
+    flex-direction: row;
+    /* flex-wrap: wrap-reverse; */
+    /* justify-content: space-between; */
+    align-items: ;
+
+}
+
+div {
+    width: 20vw;
+    border:1px solid grey;
+    height: 30%;
+    background-color: indigo;
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
+* {
+    margin:0px;
+    padding:0px;
+}

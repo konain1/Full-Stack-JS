@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    animation-name: race;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-fill-mode:forwards;
+    animation-direction: alternate-reverse ;
+}
+
+@keyframes race {
+    from{
+        width: 30px;
+    }
+    to {
+        width: 700px;
+    }
+
+}

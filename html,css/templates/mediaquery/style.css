@@ -1,0 +1,30 @@
+article {
+    width: 70vh;
+    height: 70vh;
+    border: 3px solid grey;
+    overflow: hidden;
+    margin: 30px auto;
+}
+article img {
+    
+    height: 10rem;
+    float: left;
+}
+.pp {
+    clear: both;
+}
+
+@media  screen and (max-width:400px) {
+    body {
+        background-color: hotpink;
+    }    
+}
+
+@media  screen and (max-width:300px) {
+    h1 {
+        text-align: center;
+    } 
+    p {
+       font-size: bolder;
+    }
+}

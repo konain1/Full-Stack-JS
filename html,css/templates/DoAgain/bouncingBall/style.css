@@ -1,0 +1,49 @@
+
+div {
+    /* border: 1px solid green; */
+    /* border-radius: 50%; */
+    /* position: absolute; */
+    width: 150px;
+    height: 150px;
+    margin: 20% 20%;
+    animation-name: baseketball;
+    animation-duration: 2s;
+    animation-timing-function:ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+   
+}
+div img {
+   
+    animation:3s rotate infinite linear;
+    width: 100%;
+    height: 100%;
+    
+   
+}
+
+@keyframes baseketball {
+    
+    from {
+        transform: translateY(opx);
+       
+    }
+    to {
+        transform: translateY(285px);
+       
+      
+    }
+}
+
+@keyframes rotate{
+    
+    from {
+        transform: rotateZ(0deg)
+       
+    }
+    to {
+        transform: rotateZ(360deg)
+       
+      
+    }
+}

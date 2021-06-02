@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    animation-name: race;
+    animation-duration: 2s;
+    animation-iteration-count: 20;
+    animation-fill-mode:forwards;
+    animation-direction: alternate-reverse ;
+}
+
+@keyframes race {
+   0%{
+       height: 30px;
+   }
+   25%{
+       height: 70px;
+       background-color: brown;
+   }
+   50% {
+       height: 100px;
+       background-color: cornflowerblue;
+       width: 70px;
+   }
+   100% {
+       height: 120px;
+       background-color: darkgreen;
+   }
+
+}

@@ -1,0 +1,60 @@
+div:nth-child(odd) {
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    animation-name: hitbit;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-duration: 4s;
+
+}
+div:nth-child(even){
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    animation-name: evenhit;
+    animation-duration: 4.5s;
+    /* transition: cubic-bezier(0.12, 0, 0.39, 0); */
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+section {
+     width: 100vw;
+     height: 50vh;
+     border: 1px solid grey;
+     display: flex;
+     align-items: flex-end;
+}
+
+
+@keyframes  evenhit {
+
+    from {
+        height: 30px;
+        
+        
+    }
+    to {
+        
+        height: 300px;
+        transition: ease-in;
+
+    }
+
+}
+@keyframes hitbit {
+
+    from {
+        /* transform: translateY(0px); */
+        height: 30px;
+        
+    }
+    to {
+        /* transform: translateY(-70px); */
+        height: 300px;
+    }
+
+} 
+

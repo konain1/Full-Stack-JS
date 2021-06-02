@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intermediate methods</title>
+</head>
+<body>
+    <h1>Array Intermediate Methods()</h1>
+
+
+    <h3>slice() is a non-destructive method</h3>
+    <p>
+
+        let a = [1,2,3,4] <br>
+        undefined <br>
+        a.slice() <br>
+        (4) [1, 2, 3, 4] <br>
+        a.slice(2) <br>
+        (2) [3, 4]0: 31: 4length: 2__proto__: Array(0) <br>
+        a.slice(0,3) <br>
+        (3) [1, 2, 3] <br>
+    </p>
+        <hr>
+    <h5>splice() it is destructive method </h5>
+    <p>
+        let a = [1,2,3,4,5,6,7,8,9] <br>
+        undefined <br>
+        a <br>
+        (9) [1, 2, 3, 4, 5, 6, 7, 8, 9] <br>
+        a.splice(2,5) <br>
+        (5) [3, 4, 5, 6, 7] <br>
+        a <br>
+        (4) [1, 2, 8, 9] <br>
+        a.splice(0,1,"oneplus","samsung") <br>
+        [1] <br>
+        a   <br>
+        ["oneplus", "samsung", 2, 8, 9]
+    </p>
+    <hr>
+    <h5>split() method it break string and store in array</h5>
+    <p>
+
+        let name = `hi my name is konain ahmed` <br>
+            undefined <br>
+            name <br>
+            "hi my name is konain ahmed" <br>
+            name.split(" "); <br>
+            (6) ["hi", "my", "name", "is", "konain", "ahmed"] <br>
+    </p>
+
+    <p>
+        let name = "hi my name is konain" <br>
+        undefined <br>
+        name <br>
+        "hi my name is konain" <br>
+        name.split("i") <br>
+(4) ["h", " my name ", "s kona", "n"]
+    </p>
+
+    <h5>join() method typecast into string and replace the valueof space</h5>
+
+    <p>
+
+        let arr = [1,2,3,4,5] <br>
+         undefined <br>
+        arr.join('-->') <br>
+        "1-->2-->3-->4-->5" <br>
+    </p>
+</body>
+</html>
