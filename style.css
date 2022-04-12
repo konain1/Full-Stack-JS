@@ -1,0 +1,42 @@
+body {
+    font-weight: 400;
+    background-color: azure;
+}
+
+header {
+    background-color: teal;
+    /* height: 80vh; */
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 3rem;
+    border-radius: 100px;
+    box-shadow: 13px 30px 13px 13px;
+}
+
+h1{
+    color: aquamarine;
+}
+ul {
+    display: flex;
+    /* border: 1px solid grey; */
+    justify-content: space-between;
+    width: 100%;
+}
+li {
+    list-style: none;
+    /* margin-top: 10px; */
+    font-size: 25px;
+    color: aquamarine;
+}
+nav {
+    width: 30rem;
+    position:relative;
+    margin-top: 0.7rem;
+    /* border:1px solid white; */
+}
+img {
+    width: 90vw;
+    height: 90vh;
+    margin-left: 5rem;
+    box-shadow: 13px 30px 13px 13px;
+}
