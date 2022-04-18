@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');   
 
 
 // let content = fs.readFileSync('f1.txt');
@@ -49,6 +50,39 @@ const fs = require('fs');
 
 //folder path    CHECK CONTENT OF THE DIRECTORY
 
-let folderpath = '//home//konain7//dev//node//newFolder';
-let content = fs.readdirSync(folderpath);
-console.log(content);
+// let folderpath = '//home//konain7//dev//node//newFolder';
+
+// let content = fs.readdirSync(folderpath);
+// console.log(content);
+
+
+// copying file
+// src destination
+
+let srcpath = '/home/konain7/dev/node/newFolder/file.txt';
+
+let destfolder = '/home/konain7/dev/node/destFolder';
+
+
+
+// let pathbaseName = path.basename(srcpath); //file.txt
+
+// console.log(pathbaseName);
+
+// let destinationPath = path.join(destfolder,pathbaseName);
+
+// console.log(destinationPath);
+
+// fs.copyFileSync(srcpath,destinationPath);
+
+// console.log('file copied');
+
+// extention name of the file
+
+let ext = path.extname(srcpath);
+
+console.log(ext);
+
+console.log(__dirname);
+console.log(__filename);
+
