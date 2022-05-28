@@ -35,19 +35,20 @@ if(isbothPresent == true){
     return;
 }
 
-// // file does not exsist
+// file does not exsist
 
-// for(let i = 0;i<filesArr.length;i++){
-//     let isPresent = fs.readFileSync(filesArr[i]);
+for(let i = 0;i<filesArr.length;i++){
+    let isPresent = fs.existsSync(filesArr[i]);
+    // console.log(isPresent)
 
-//     if(isPresent != true){
-//         console.log("wrong file")
-//         return;
-//     }
-// }
+    if(isPresent != true){
+        console.log("wrong file")
+        return;
+    }
+}
 
 
-// // option invalid
+// // // option invalid
 
 // for(let i = 0;i<optionsArr.length;i++){
 
@@ -56,6 +57,7 @@ if(isbothPresent == true){
 //     if(isOptionpresent != true){
 //         console.log("wrong option");
 //         return;
+        
 //     }
 // }
 
@@ -71,7 +73,7 @@ for(let i =0;i<filesArr.length;i++){
 // spliting file into content array
 
 let contentArr = content.split('\n');
-
+// console.log(contentArr)
 
 // -s   method remove spaces except one space after content
 
@@ -89,7 +91,7 @@ if(_sPresent == true){
             contentArr[i] = null;
         }
     }
-
+    
     
     //putting not empty indexes into tempArr
 
@@ -102,7 +104,7 @@ if(_sPresent == true){
     }
   
     contentArr = tempArr;
-   
+    // console.log(contentArr,"hii")
 }
 
 
@@ -126,7 +128,7 @@ if(nPresent == true){
 //-b   no numbering on empty lines
 
 let bPresent = optionsArr.includes('-b');
-
+// console.log(contentArr)
 if(bPresent == true){
     let count = 1;
 
@@ -139,7 +141,6 @@ if(bPresent == true){
 
    
 }
-
 
 
 
