@@ -4,12 +4,8 @@ const request = require('request');
 
 const cheerio = require('cheerio');
 
-// const sofascore = 'https://www.sofascore.com/football/livescore'
 
-let fulllink= 'https://www.espncricinfo.com/series/ipl-2020-21-1210595'
-
-
-request(fulllink,cb)
+request(url,cb)
 
 
 function cb(err,response,html){
@@ -26,16 +22,41 @@ function extract(html){
 
     let seltool = cheerio.load(html)
 
-    let getlink = seltool('.ds-text-compact-xs.ds-font-medium');
+    let anchorElement = seltool('[class="ds-block ds-text-center ds-uppercase ds-text-ui-typo-primary ds-underline-offset-4 hover:ds-underline hover:ds-decoration-ui-stroke-primary ds-block"]')
+    let link = anchorElement.attr('href');
+    // console.log(link)
+    let fulllLink ='https://www.espncricinfo.com'+link
+    // console.log(fulllLink);
 
-    console.log(getlink)
+    getfullmatchlink(fulllLink);
 }
 
 
+function getfullmatchlink(uri){
+    request(uri,function(err,res,html){
+        if(err){
+            console.log(err)
+        }else{
+            // console.log(uri)
+            extractAllLink(html)
+        }
+    })
 
 
+}
 
+function extractAllLink(uri){
+    let $ = cheerio.load(uri);
+    let reportBlock = $(".ds-flex.ds-mx-4.ds-pt-2.ds-pb-3.ds-space-x-4.ds-border-t.ds-border-line-default-translucent")
+    console.log(reportBlock.length)
+    for(let i = 0; i< reportBlock.length;i++){
+        let spans = reportBlock[i].$('.ds-inline-flex.ds-items-center.ds-leading-none')
+        console.log(spans.length)
+ }
 
+}
+
+// this will not work website upgrated  scraping probhited
 
 
 
