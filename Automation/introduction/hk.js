@@ -9,6 +9,7 @@ let password = 'gitbaba@786'
 // let loginBtn = class["ui-btn ui-btn-large ui-btn-primary auth-button ui-btn-styled"]
 const loginLink = "https://www.hackerrank.com/auth/login";
 
+const codeFile = require('./code')
 
 let openBrowser = puppeteer.launch({
     headless:false,
@@ -48,8 +49,10 @@ openBrowser.then(function(instense){
         return challengesArray
        
     }).then(function(questionArr){
-        console.log(questionArr.length);
-        let questionSolved = 
+        // console.log(questionArr.length);
+        let questionWillBeSolvedpromise = questionSolve(page,questionArr[0],codeFile.answers[0]);
+
+        return questionWillBeSolvedpromise;
     })
 
 
@@ -77,6 +80,16 @@ function waitAndclick(selector,cPage){
             resolve();
         }).catch(function(){
             reject();
+        })
+    })
+}
+
+function questionSolve(page,question,ans){
+    return new Promise(function(resolve,reject){
+
+        let questionClicked = question.click();
+        questionClicked.then(function(){
+            console.log("question has clicked")
         })
     })
 }
