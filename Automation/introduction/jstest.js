@@ -9,6 +9,8 @@
 //   console.log("Yay it's a string!");
 // }
 
+// console.log(typeof( randomValue))
+
 // A: It's not a string!
 // B: Yay it's a string! 
 // C: TypeError
@@ -34,16 +36,16 @@
 // // < --------------Question 3----------------->
 // const fruit = ['🍌', '🍊', '🍎']
 
-// fruit.slice(0, 1)
-// fruit.splice(0, 1)
-// fruit.unshift('🍇')
+// //fruit.slice(0, 1)     // (start, end -1)  cut
+// //fruit.splice(0, 1)   //  (start,quentity)  remove
+// //fruit.unshift('🍇')  // pull in the front 0 index
 
 // console.log(fruit)
 
-// A: ['🍌', '🍊', '🍎']
-// B: ['🍊', '🍎']
-// C: ['🍇', '🍊', '🍎']
-// D: ['🍇', '🍌', '🍊', '🍎']
+// // A: ['🍌', '🍊', '🍎']
+// // B: ['🍊', '🍎']
+// // C: ['🍇', '🍊', '🍎']
+// // D: ['🍇', '🍌', '🍊', '🍎']
 
 // // < --------------Question 4----------------->
 
@@ -69,13 +71,15 @@
 // /* 2 */ emojis.splice(0, 2);
 // /* 3 */ emojis = [...emojis, '🥂'];
 // /* 4 */ emojis.length = 0;
+
+
 // A: 1
 // B: 1 and 2
 // C: 3 and 4
 // D: 3
 
 // // < --------------Question 6----------------->
-// // for this ques read this https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+// for this ques read this https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 
 // const add = function (x) {
 //     return x + x;
@@ -101,8 +105,8 @@
 //     street: '100 Main St',
 //   },
 // };
-
-// Object.freeze(person);
+    
+// Object.freeze(person.name);
 
 // A: person.name = "Evan Bacon"
 // B: delete person.address
@@ -174,9 +178,10 @@
 // } else {
 // console.log(`We don't have to buy bananas!`);
 // }
+// console.log(groceries.indexOf('banana'))
 
 // A: We have to buy bananas!
-// B: We don't have to buy bananas
+// B: We don't have to buy bananas // it gives the 0 index means false
 // C: undefined
 // D: 1
 
@@ -194,10 +199,10 @@
 //   },
 // };
 
-// console.log(person.pet?.name);
+// console.log(person.pet.name);
 // console.log(person.pet?.family?.name);
-// console.log(person.getFullName?.());
-// console.log(member.getLastName?.());
+// console.log(person.getFullName());
+// console.log(member.getLastName());
 
 // A: undefined undefined undefined undefined
 // B: Mara undefined Lydia Hallie ReferenceError
@@ -215,8 +220,8 @@
 // C: SyntaxError
 // D: ReferenceError
 
-// // < --------------Question 15----------------->
-// // read:https://www.w3schools.com/react/react_es6_spread.asp
+// < --------------Question 15----------------->
+// read:https://www.w3schools.com/react/react_es6_spread.asp
 // function sumValues(x, y, z) {
 //   return x + y + z;
 // }
@@ -224,6 +229,8 @@
 // B: sumValues([...[1, 2, 3]])
 // C: sumValues(...[1, 2, 3])
 // D: sumValues([1, 2, 3])
+
+
 
 // // < --------------Question 16----------------->
 // // revise default paramters and spred operator 
@@ -233,6 +240,7 @@
 // };
 
 // const changeAge = (x = { ...person }) => (x.age += 1);
+
 // const changeAgeAndName = (x = { ...person }) => {
 //   x.age += 1;
 //   x.name = 'Sarah';
@@ -301,6 +309,9 @@
 // const person = {
 //   name: 'Lydia',
 //   age: 21,
+//   cast : 'gogo',
+//   lastName:"kasab",
+  
 // };
 
 // for (const [x, y] of Object.entries(person)) {
