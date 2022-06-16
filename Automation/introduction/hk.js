@@ -1,6 +1,7 @@
 
 
 const puppeteer = require('puppeteer');
+const { answers } = require('./code');
 
 
 let page;
@@ -88,8 +89,34 @@ function questionSolve(page,question,ans){
     return new Promise(function(resolve,reject){
 
         let questionClicked = question.click();
+
         questionClicked.then(function(){
-            console.log("question has clicked")
+            
+            let CustomeTextAreaCheckBox = waitAndclick('.checkbox-input',page)
+
+            return CustomeTextAreaCheckBox;
+
+        }).then(function(){
+            let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
+            console.log("clicked")
+            return waitforEditorPromise;
         })
+        
+        
+        .then(function(){
+            return page.waitForSelector('.input.text-area.custominput ')
+
+        }).then(function(){
+            return page.type('.input.text-area.custominput ',ans)
+        }).then(function(){
+           let controlPressed = page.keyboard.down('Control');
+    }).then(function(){
+        let Apressed = page.keyboard.press('A')
+    }).then(function(){
+        let cut = page.keyboard.press('X',{delay:20000})
+    }).then(function(){
+       let conrolRelease = page.keyboard.up('Control')
+    }).then(function(){
+        console.log("control released")
     })
-}
+})}
