@@ -66,10 +66,10 @@ int main()
     for (size_t i = 0; i < result.size(); i++) {
         fout << result[i];
         if (i != result.size() - 1) {
-            fout << " ";
+        fout <<" ";
         }
     }
-    fout << "\n";
+    fout << " ";
     fout.close();
     return 0;
 }

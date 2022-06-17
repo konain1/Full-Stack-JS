@@ -1,7 +1,7 @@
 
 
 const puppeteer = require('puppeteer');
-const { answers } = require('./code');
+const  answers  = require('./code');
 
 
 let page;
@@ -47,13 +47,22 @@ openBrowser.then(function(instense){
         return wampUpPromise;
     }).then(function(){
         let challengesArray = page.$$('[class="ui-btn ui-btn-normal primary-cta ui-btn-line-primary ui-btn-styled"]');
+        
         return challengesArray
        
     }).then(function(questionArr){
-        // console.log(questionArr.length);
-        let questionWillBeSolvedpromise = questionSolve(page,questionArr[0],codeFile.answers[0]);
-
-        return questionWillBeSolvedpromise;
+        // let questionWillBeSolvedpromise
+        
+        for(let i = 0;i<2;i++){
+            let questionWillBeSolvedpromise = questionSolve(page,questionArr[i],codeFile.answers[i])
+            console.log(questionWillBeSolvedpromise);
+            return questionWillBeSolvedpromise;
+        }
+            
+           
+        
+    
+        // return questionWillBeSolvedpromise;
     })
 
 
@@ -110,13 +119,35 @@ function questionSolve(page,question,ans){
             return page.type('.input.text-area.custominput ',ans)
         }).then(function(){
            let controlPressed = page.keyboard.down('Control');
+           return controlPressed;
     }).then(function(){
         let Apressed = page.keyboard.press('A')
+        
     }).then(function(){
         let cut = page.keyboard.press('X',{delay:20000})
+        return cut;
     }).then(function(){
-       let conrolRelease = page.keyboard.up('Control')
+       let controlRelease = page.keyboard.up('Control')
+       return controlRelease;
     }).then(function(){
-        console.log("control released")
-    })
+        let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
+        // console.log("clicked")
+        return waitforEditorPromise;
+    }).then(function(){
+        let controlPressed = page.keyboard.down('Control');
+        return controlPressed;
+ }).then(function(){
+     let Apressed = page.keyboard.press('A',{delay:5})
+     
+ }).then(function(){
+    let pressV = page.keyboard.press('V',{delay:5});
+ }).then(function(){
+    let controlRelease = page.keyboard.up('Control');
+ }).then(function(){
+    return page.click('[class="ui-btn ui-btn-normal ui-btn-primary pull-right hr-monaco-submit ui-btn-styled"]',{delay:5})
+ }).then(function(){
+    resolve();
+ }).catch(function(){
+    reject();
+ })
 })}
