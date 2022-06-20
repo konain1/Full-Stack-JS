@@ -1,0 +1,183 @@
+
+
+// $bgImage: 'https://images.unsplash.com/photo-1569173675610-42c361a86e37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80';
+
+$cardColor:#F5A369;
+@mixin containerSection($bgImage: none) {
+    width: 100%;
+    height: 80vh;
+    color: blueviolet;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -280px;
+    background-image: $bgImage;
+    
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    @include containerSection(url('https://images.unsplash.com/photo-1569173675610-42c361a86e37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80'));
+
+    &__msg {
+      
+        display:flex;
+        transform: translateY(390px);
+        width: 50%;
+        height: 250px;
+        // border:10px solid grey;
+        font-size: 45px;
+        color: rgb(197, 218, 220);
+        text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+       
+
+    }
+
+    &__aboutUsDescription{
+        // background-color: yellow;
+        width: 55%;
+        height: 250px;
+        color:black;
+        margin:70px auto ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // position:absolute;   
+        overflow: hidden;
+       
+         
+
+    }
+    &__aboutUsDescription h1{
+       font-size: 35px;
+       margin-top: -100px;
+       position: absolute;
+        // margin: auto;
+        display: block
+    
+    }
+    &__aboutUsDescription p { 
+        font-size: 14px;
+        margin-top: 130px;
+        display: block;
+    }
+}
+
+.card {
+
+    @include containerSection();
+    &__cover {
+        width: 80%;
+        height: 80%;
+        // background-color: aqua;
+        margin: auto;
+        display: flex;
+
+    }
+    &__items {
+        width: 25%;
+        height: 80%;
+        background-color: white;
+        margin:auto;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        
+
+    }
+  
+    
+    &__image{
+        width: 100%;
+        height: 50%;
+        // background-color: white;
+        // background-image: url('https://images.unsplash.com/photo-1569769107543-e0f61bab8e02?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+        margin:auto;
+        background-color: $cardColor;
+        // background-size: contain;
+        display: flex;
+        color: black;
+        align-items: flex-start;
+        h1 {
+            color: rgb(0, 0, 0);
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+    }
+
+    &__icon{
+        font-size: 40px;
+        // border: 1px solid grey;
+        position: relative;
+       top: 10px;
+       left: 10px;
+       margin-top:30px;
+       
+    }
+
+    &__icon::after{
+        content: '';
+        position:absolute ;
+        top: -25px;
+        left: 50%;
+        width: 300px;
+        height: 2px;
+        background-color: rgb(243, 239, 239);
+    //   margin: auto;
+
+    }
+    &__tittle {
+        width: 80%;
+        height: 10%;
+        color: black;
+        margin:auto;
+       text-align: center;
+       h1 {
+        position: relative;
+        top: -40px;
+        right: 70px;
+       }
+       padding: 30px;
+
+    }
+    &__desc {
+        width: 50%;
+        height: 30%;
+        // background-color: #fff;
+        text-align: center;
+        // margin: auto;
+        color: black;
+        font-size: 10px;
+    }
+    &__btn {
+      
+     border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+    margin-top: -51px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border:white solid 0.2rem;
+    width: 10rem;
+    padding: 1.5rem;
+    }
+
+    &__footer {
+      background-color: black;
+      height: 70px;
+      overflow: hidden;
+      font-size: 14px;
+      color: white;
+      display: flex;
+    }
+    &__foot_icon {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-left: 120px;
+    }
+
+}

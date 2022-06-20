@@ -51,18 +51,16 @@ openBrowser.then(function(instense){
         return challengesArray
        
     }).then(function(questionArr){
-        // let questionWillBeSolvedpromise
-        
-        for(let i = 0;i<2;i++){
-            let questionWillBeSolvedpromise = questionSolve(page,questionArr[i],codeFile.answers[i])
-            console.log(questionWillBeSolvedpromise);
-            return questionWillBeSolvedpromise;
-        }
-            
+        // let questionWillBeSolvedpromise = []
+        // let result;
+        let questionWillBeSolvedpromise = questionSolve(page,questionArr[0],codeFile.answers[0])
+        // for(let i = 0;i<2;i++){
+        //     questionWillBeSolvedpromise.push(questionSolve(page,questionArr[i],codeFile.answers[i]));
            
-        
-    
-        // return questionWillBeSolvedpromise;
+        // }
+    //     console.log(questionWillBeSolvedpromise)
+    //     const res = await Promise.allSettled(questionWillBeSolvedpromise)
+    //     return res;
     })
 
 
@@ -98,6 +96,7 @@ function questionSolve(page,question,ans){
     return new Promise(function(resolve,reject){
 
         let questionClicked = question.click();
+        console.log(' ====> ',questionClicked);
 
         questionClicked.then(function(){
             
