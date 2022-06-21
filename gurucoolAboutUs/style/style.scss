@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    width: 100%;
+    height: 80vh;
+    // border: 10px solid black;
+    margin: 140px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__tittle {
+        color: rgb(5, 4, 4);
+        font-family: 'M PLUS 1p', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin: auto;
+    }
+    &__cardItems{
+        background-color: rgb(233, 233, 132);
+        width: 400px;
+       border-radius: 28px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
+    }
+    &__logoCircle{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        // border: 1px solid black;
+        background-color: aqua;
+        margin:40px 0px;
+
+       }
+
+    &__logoCircle img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__titleArea{
+        font-family: 'M PLUS 1p', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        margin: 15px;
+    }
+
+    &__descArea{
+        text-align: center;
+        padding: 18px;
+        line-height: 1.5;
+    }
+    &__cardLayout {
+        display: flex;
+        margin-top: 20px;   
+        // border: 1px solid black;
+        height: 500px;
+        // width: 100vw;
+        justify-content: center;
+        gap: 20px;
+        align-items: flex-start;
+    
+    }
+}

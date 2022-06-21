@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 80vh;
+  margin: 140px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container__tittle {
+  color: rgb(5, 4, 4);
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: auto;
+}
+.container__cardItems {
+  background-color: rgb(233, 233, 132);
+  width: 400px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.container__logoCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: aqua;
+  margin: 40px 0px;
+}
+.container__logoCircle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container__titleArea {
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 15px;
+}
+.container__descArea {
+  text-align: center;
+  padding: 18px;
+  line-height: 1.5;
+}
+.container__cardLayout {
+  display: flex;
+  margin-top: 20px;
+  height: 500px;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+}/*# sourceMappingURL=style.css.map */
