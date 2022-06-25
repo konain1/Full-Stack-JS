@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainScreen {
+  height: 80vh;
+  display: flex;
+  border: 1px solid grey;
+  background-color: #f9c934;
+}
+.mainScreen__leftSide {
+  width: 33%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.mainScreen__leftSide h1 {
+  color: white;
+  font-size: 45px;
+  color: black;
+  text-shadow: 1px 1px 1px rgb(238, 184, 50);
+  font-family: "Fascinate", cursive;
+}
+.mainScreen__leftSide h3 {
+  color: white;
+  margin-left: 150px;
+  font-size: 75px;
+  text-shadow: 1px 1px 1px #000;
+}
+.mainScreen__cachyTxt {
+  margin-left: 200px;
+  position: relative;
+}
+.mainScreen__middle {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainScreen__imgScreen {
+  height: 60%;
+  width: 100%;
+}
+.mainScreen__imgScreen img {
+  background-size: cover;
+  width: 100%;
+}
+.mainScreen__rightSide {
+  width: 42%;
+  display: flex;
+  align-items: center;
+}
+.mainScreen__textingSection {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 60%;
+  width: 70%;
+}
+.container {
+  width: 100%;
+  height: 80vh;
+  margin: 140px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container__tittle {
+  color: rgb(5, 4, 4);
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: auto;
+}
+.container__cardItems {
+  background-color: rgb(233, 233, 132);
+  width: 400px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.container__logoCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: aqua;
+  margin: 40px 0px;
+}
+.container__logoCircle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container__titleArea {
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 15px;
+}
+.container__descArea {
+  text-align: center;
+  padding: 18px;
+  line-height: 1.5;
+}
+.container__cardLayout {
+  display: flex;
+  margin-top: 20px;
+  height: 500px;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+}/*# sourceMappingURL=style.css.map */

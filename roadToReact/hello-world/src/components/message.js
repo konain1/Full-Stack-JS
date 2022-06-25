@@ -20,7 +20,8 @@ class Msg extends Component {
     render(){
         return (
             <div>
-                <h1>{this.state.msgTxt}</h1>
+               <div><p>{this.state.msgTxt}</p></div>
+
                 <button onClick={()=> this.changemsgTxt()}>Subscribe</button>
             </div>
         )

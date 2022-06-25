@@ -3,13 +3,16 @@ import './App.css';
 // import Greet from './components/greet.js';
 // import Welcome from './components/Welcome.js';
 // import Hello from './components/hello.js';
-import Msg from './components/message';
+// import Msg from './components/message';
+import Counter from './components/counter';
+import 
 
 function App() {
   return (
     <div className="App">
 
-      <Msg />
+     
+      <Counter />
 
 
        {/* <Hello />

@@ -4,36 +4,107 @@
   box-sizing: border-box;
 }
 
+.mainScreen {
+  height: 90vh;
+  border: 1px solid grey;
+}
+.mainScreen__Portal {
+  height: 100%;
+  position: relative;
+}
+.mainScreen__Portal img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.mainScreen__Portal::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(240, 227, 43);
+  left: 0;
+  top: 0;
+  opacity: 0.1;
+  z-index: 0;
+}
+.mainScreen__Portal::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(12, 1, 1);
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  z-index: 1;
+}
+.mainScreen__Portal__Portal > * {
+  position: relative;
+}
+.mainScreen__portal_description {
+  position: relative;
+  margin-top: -750px;
+  width: 800px;
+  font-size: 45px;
+  z-index: 2;
+}
+.mainScreen__portal_description h1 {
+  text-align: center;
+  z-index: 5;
+  color: rgb(255, 255, 255);
+  padding-left: 40px;
+}
+
 .container {
   width: 100%;
-  height: 80vh;
-  margin: 140px auto;
+  padding: 100px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #EFEEFD;
+  gap: 20px;
+  transition: all 0.3s ease-in;
 }
 .container__tittle {
   color: rgb(5, 4, 4);
   font-family: "M PLUS 1p", sans-serif;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  margin: auto;
+  margin-bottom: 64px;
 }
 .container__cardItems {
-  background-color: rgb(233, 233, 132);
+  background-color: white;
   width: 400px;
-  border-radius: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+  box-shadow: rgb(239, 241, 253) 0px -3px 10px 10px;
+  transition: all 0.4s ease-in;
+  border-radius: 28px;
+}
+.container__cardItems:hover {
+  transform: scale(1.04);
+  border: 1px solid #6749f6;
+}
+.container__cardItemContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  z-index: 3;
+  border-radius: 28px;
+  transition: all 0.3s ease-in;
 }
 .container__logoCircle {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: aqua;
-  margin: 40px 0px;
+  background-color: #f3f4f8;
+  margin: 16px 0px;
+  border: 2px solid rgb(155, 130, 240);
 }
 .container__logoCircle img {
   width: 100%;
@@ -45,7 +116,6 @@
 .container__titleArea {
   font-family: "M PLUS 1p", sans-serif;
   font-family: "Poppins", sans-serif;
-  margin: 15px;
 }
 .container__descArea {
   text-align: center;
@@ -54,9 +124,135 @@
 }
 .container__cardLayout {
   display: flex;
-  margin-top: 20px;
+  margin-top: 30px;
   height: 500px;
   justify-content: center;
   gap: 20px;
   align-items: flex-start;
+}
+.container__cardItemContainer {
+  position: relative;
+}
+
+.mission {
+  display: flex;
+  background-color: #e8e7fb;
+}
+.mission__left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mission__right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mission__txt {
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+}
+.mission__txt p {
+  padding-top: 40px;
+  font-size: 20px;
+  font-family: poppins;
+}
+.mission__txt h1 {
+  font-family: poppins;
+}
+.mission img {
+  width: 50%;
+  height: 40%;
+  padding: 30px;
+  margin-left: 130px;
+  transform: rotate(16deg);
+}
+@-webkit-keyframes arrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(16deg);
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(16deg);
+  }
+}
+
+.vision {
+  background-color: #e1e0f7;
+  display: flex;
+  height: 60vh;
+  justify-content: space-evenly;
+  font-family: poppins;
+}
+.vision__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  gap: 10px;
+  padding: 30px 30px;
+  color: rgb(1, 1, 1);
+}
+.vision__txt h1 {
+  font-size: 45px;
+}
+.vision__txt p {
+  font-size: 23px;
+  text-align: center;
+}
+.vision__vector {
+  height: 400px;
+  margin-top: 50px;
+}
+.vision__vector img {
+  height: 100%;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: center;
+  padding: 52px 140px;
+  font-size: 12px;
+  background-color: #dad7f7;
+  font-family: poppins;
+}
+.team__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team__head h1 {
+  font-weight: 100;
+}
+.team__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team__body h2 {
+  font-weight: 100;
+}
+.team__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 50px;
+  font-size: 30px;
+}
+.team__footer i {
+  margin: 0 12px;
 }/*# sourceMappingURL=style.css.map */
