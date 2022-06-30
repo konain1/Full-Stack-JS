@@ -1,0 +1,177 @@
+
+
+const puppeteer = require('puppeteer');
+const  answers  = require('./code');
+
+
+let page;
+let email = 'palosev135@musezoo.com'
+let password = 'gitbaba@786'
+// let loginBtn = class["ui-btn ui-btn-large ui-btn-primary auth-button ui-btn-styled"]
+const loginLink = "https://www.hackerrank.com/auth/login";
+
+// const codeFile = require('./code')
+
+
+
+(async function(){
+
+    try {
+        
+        let openBrowser =  await puppeteer.launch({
+            headless:false,
+           defaultViewport:null
+        })
+        
+        let NewTab = await openBrowser.newPage();
+
+        await NewTab.goto(loginLink)
+
+        await NewTab.type('input[id="input-1"]',email,{delay:50});
+        await NewTab.type("input[id='input-2']",password,{delay:100})
+
+        await NewTab.click("[class='ui-btn ui-btn-large ui-btn-primary auth-button ui-btn-styled']")
+
+
+    } catch (error) {
+        console.log(error)
+    }
+
+
+})();
+
+
+
+
+// openBrowser.then(function(instense){
+//     let tab = instense.newPage();
+//     return tab;
+// }).then(function(link){
+
+//     page = link;
+//     let weblink = link.goto(loginLink)
+//     return weblink;
+// }).then(function(){
+
+//     let emialPromise = page.type('input[id="input-1"]',email,{delay:50});
+//     return emialPromise
+
+// }).then(function(){
+//     let passPromise = page.type("input[id='input-2']",password,{delay:100})
+//     return passPromise;
+// }).then(function(){
+//     page.click("[class='ui-btn ui-btn-large ui-btn-primary auth-button ui-btn-styled']")}
+//     ).then(function(){
+//         //  waiting for page response
+//         let algoWillBeclickedPromise = waitAndclick('.topic-card a[data-analytics="SelectTopic"]',page)
+        
+//         return algoWillBeclickedPromise;
+//     }).then(function(){
+//         let wampUpPromise = waitAndclick('input[value="warmup"]',page);
+//         // console.log(page)
+//         return wampUpPromise;
+//     }).then(function(){
+//         let challengesArray = page.$$('[class="ui-btn ui-btn-normal primary-cta ui-btn-line-primary ui-btn-styled"]');
+        
+//         return challengesArray
+       
+//     }).then(function(questionArr){
+//         // let questionWillBeSolvedpromise = []
+//         // let result;
+//         let questionWillBeSolvedpromise = questionSolve(page,questionArr[0],codeFile.answers[0])
+//         // for(let i = 0;i<2;i++){
+//         //     questionWillBeSolvedpromise.push(questionSolve(page,questionArr[i],codeFile.answers[i]));
+           
+//         // }
+//     //     console.log(questionWillBeSolvedpromise)
+//     //     const res = await Promise.allSettled(questionWillBeSolvedpromise)
+//     //     return res;
+//     })
+
+
+
+
+
+// // it will wait for main page loading then select selector of the page  , cPage = main page
+// function waitAndclick(selector,cPage){
+
+//     // this promise function for waiting for main page so that selector would be selected
+//     return new Promise(function(resolve,reject){
+
+
+//         // this waitformadalPromise function select the selector after login function finished
+//         let waitFormodalPromise = cPage.waitForSelector(selector)
+
+
+//         // here we clicked the algorith section
+//         waitFormodalPromise.then(function(){
+
+//             let clickedModal = cPage.click(selector) // clicked
+//             return clickedModal;
+
+//         }).then(function(){
+//             resolve();
+//         }).catch(function(){
+//             reject();
+//         })
+//     })
+// }
+
+// function questionSolve(page,question,ans){
+//     return new Promise(function(resolve,reject){
+
+//         let questionClicked = question.click();
+//         console.log(' ====> ',questionClicked);
+
+//         questionClicked.then(function(){
+            
+//             let CustomeTextAreaCheckBox = waitAndclick('.checkbox-input',page)
+
+//             return CustomeTextAreaCheckBox;
+
+//         }).then(function(){
+//             let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
+//             console.log("clicked")
+//             return waitforEditorPromise;
+//         })
+        
+        
+//         .then(function(){
+//             return page.waitForSelector('.input.text-area.custominput ')
+
+//         }).then(function(){
+//             return page.type('.input.text-area.custominput ',ans)
+//         }).then(function(){
+//            let controlPressed = page.keyboard.down('Control');
+//            return controlPressed;
+//     }).then(function(){
+//         let Apressed = page.keyboard.press('A')
+        
+//     }).then(function(){
+//         let cut = page.keyboard.press('X',{delay:20000})
+//         return cut;
+//     }).then(function(){
+//        let controlRelease = page.keyboard.up('Control')
+//        return controlRelease;
+//     }).then(function(){
+//         let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
+//         // console.log("clicked")
+//         return waitforEditorPromise;
+//     }).then(function(){
+//         let controlPressed = page.keyboard.down('Control');
+//         return controlPressed;
+//  }).then(function(){
+//      let Apressed = page.keyboard.press('A',{delay:5})
+     
+//  }).then(function(){
+//     let pressV = page.keyboard.press('V',{delay:5});
+//  }).then(function(){
+//     let controlRelease = page.keyboard.up('Control');
+//  }).then(function(){
+//     return page.click('[class="ui-btn ui-btn-normal ui-btn-primary pull-right hr-monaco-submit ui-btn-styled"]',{delay:5})
+//  }).then(function(){
+//     resolve();
+//  }).catch(function(){
+//     reject();
+//  })
+// })}

@@ -4,7 +4,7 @@ let changeWord =document.getElementById("changeWord");
 
   
 
-const texts = ['discover','uncover','unleash'];
+const texts = [' discover',' uncover',' unleash'];
 
 let count = 0;
 let idx = 0;
@@ -28,7 +28,7 @@ let letters = "";
         idx = 0;
     }
 
-    setTimeout(type,900);
+    setTimeout(type,400);
 
 
 })();

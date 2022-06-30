@@ -264,7 +264,96 @@
 }
 
 @media only screen and (max-width: 600px) {
+
   .mainScreen {
-    display: none;
+   height: 30vh;
+   border: 1px solid black;
+
   }
+
+  .container {
+    border: 1px solid black;
+    
+ }
+
+  .container .container__tittle {
+   font-size: 16px;
+   
+  }
+  .container__cardLayout {
+    height: 25vh;
+  }
+  .container__cardItemContent {
+    height: 206px;
+  }
+ 
+  .container__cardLayout .container__cardItems  .container__cardItemContent .container__logoCircle  {
+    width: 60px;
+    height: 60px;
+  
+   
+  }
+  .container__titleArea > h1 {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .container__descArea > p {
+    font-size: 8px;
+    
+  }
+  
+
+  /* .mission {
+    height: 30vh;
+  
+  } */
+  .mission__img img {
+    margin-left: 30px;
+    
+  }
+  .mission__txt h1 {
+    font-size: 12px;
+   
+  }
+  .mission__txt  p{
+    font-size: 8px;
+  }
+
+  .vision__txt h1 {
+   font-size: 16px;
+  }
+  .vision__txt p{
+    font-size: 8px;
+   }
+
+   .vision {
+    height: 20vh;
+    
+    overflow: hidden;
+   }
+   .vision__vector{
+    width: 25%;
+    height: 40%;
+    /* border: 1px solid black; */
+   
+   }
+   .team {
+  height: 30vh;
+
+   }
+
+   .team__head h1{
+    font-size: 12px;
+   }
+
+   .team__body h2{
+    font-size: 12px;
+   }
+   .team__footer {
+    font-size: 12px;
+    /* border: 1px solid black; */
+    padding: 20px 50px;
+   }
+
 }/*# sourceMappingURL=style.css.map */
