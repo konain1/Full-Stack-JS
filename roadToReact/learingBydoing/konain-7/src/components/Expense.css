@@ -1,0 +1,23 @@
+
+
+.container {
+    background-color: yellow;
+    border:3px solid black;
+   
+  
+    margin: auto;
+}
+.expense-item {
+    display: flex;
+    background-color: aqua;
+ 
+    justify-content: space-evenly;
+    border:1px solid black;
+}
+
+.price {
+  
+   
+    font-size: 28px;
+
+}

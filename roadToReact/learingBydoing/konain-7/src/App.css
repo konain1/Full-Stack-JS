@@ -1,4 +1,10 @@
 
 .app-container {
     background-color: coral;
+
+
+    text-align: center;
+    height: 40vh;
+    width: 40vh;
+    margin: 200px auto ;
 }
