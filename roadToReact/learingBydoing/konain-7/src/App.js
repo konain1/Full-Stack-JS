@@ -3,6 +3,7 @@ import './App.css'
 import Expense from './components/Expense'
 import SerialNo from './components/SerialNo'
 import MyExpenses from './components/MyExpenses'
+import NewExpense from './components/NewExpense'
 
 
 
@@ -33,10 +34,9 @@ let expenses = [
 function App(props){
     return(
 
-
         <div className="app-container">
 
-        <h2>hello world</h2>
+        <NewExpense />
 
         <MyExpenses item={expenses} />
         </div>

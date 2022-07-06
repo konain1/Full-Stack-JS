@@ -1,0 +1,22 @@
+
+
+.new-expense {
+    border: 5px solid black;
+    height: 40vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+.New-Expense__Controls {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+label {
+    font-size: 24px;
+}
+input[type="text"] , input[type="Date"]{
+    font-size: 36px;
+}
