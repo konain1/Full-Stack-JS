@@ -1,7 +1,7 @@
 
 
 const puppeteer = require('puppeteer');
-const  answers  = require('./code');
+const  codeFile  = require('./code');
 
 
 let page;
@@ -30,7 +30,15 @@ const loginLink = "https://www.hackerrank.com/auth/login";
         await NewTab.type('input[id="input-1"]',email,{delay:50});
         await NewTab.type("input[id='input-2']",password,{delay:100})
 
-        await NewTab.click("[class='ui-btn ui-btn-large ui-btn-primary auth-button ui-btn-styled']")
+        await NewTab.click("[class='ui-btn ui-btn-large ui-btn-primary auth-button ui-btn-styled']");
+
+        await waitAndclick('.topic-card a[data-analytics="SelectTopic"]',NewTab);
+        await waitAndclick('input[value="warmup"]',NewTab);
+
+                let challengesArray = await NewTab.$$('[class="ui-btn ui-btn-normal primary-cta ui-btn-line-primary ui-btn-styled"]');
+      
+
+        await questionSolve(NewTab,challengesArray[0],codeFile.answers[0])
 
 
     } catch (error) {
@@ -93,85 +101,86 @@ const loginLink = "https://www.hackerrank.com/auth/login";
 
 
 // // it will wait for main page loading then select selector of the page  , cPage = main page
-// function waitAndclick(selector,cPage){
 
-//     // this promise function for waiting for main page so that selector would be selected
-//     return new Promise(function(resolve,reject){
+function waitAndclick(selector,cPage){
 
-
-//         // this waitformadalPromise function select the selector after login function finished
-//         let waitFormodalPromise = cPage.waitForSelector(selector)
+    // this promise function for waiting for main page so that selector would be selected
+    return new Promise(function(resolve,reject){
 
 
-//         // here we clicked the algorith section
-//         waitFormodalPromise.then(function(){
+        // this waitformadalPromise function select the selector after login function finished
+        let waitFormodalPromise = cPage.waitForSelector(selector)
 
-//             let clickedModal = cPage.click(selector) // clicked
-//             return clickedModal;
 
-//         }).then(function(){
-//             resolve();
-//         }).catch(function(){
-//             reject();
-//         })
-//     })
-// }
+        // here we clicked the algorith section
+        waitFormodalPromise.then(function(){
 
-// function questionSolve(page,question,ans){
-//     return new Promise(function(resolve,reject){
+            let clickedModal = cPage.click(selector) // clicked
+            return clickedModal;
 
-//         let questionClicked = question.click();
-//         console.log(' ====> ',questionClicked);
+        }).then(function(){
+            resolve();
+        }).catch(function(){
+            reject();
+        })
+    })
+}
 
-//         questionClicked.then(function(){
+function questionSolve(page,question,ans){
+    return new Promise(function(resolve,reject){
+
+        let questionClicked = question.click();
+        console.log(' ====> ',questionClicked);
+
+        questionClicked.then(function(){
             
-//             let CustomeTextAreaCheckBox = waitAndclick('.checkbox-input',page)
+            let CustomeTextAreaCheckBox = waitAndclick('.checkbox-input',page)
 
-//             return CustomeTextAreaCheckBox;
+            return CustomeTextAreaCheckBox;
 
-//         }).then(function(){
-//             let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
-//             console.log("clicked")
-//             return waitforEditorPromise;
-//         })
+        }).then(function(){
+            let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
+            console.log("clicked")
+            return waitforEditorPromise;
+        })
         
         
-//         .then(function(){
-//             return page.waitForSelector('.input.text-area.custominput ')
+        .then(function(){
+            return page.waitForSelector('.input.text-area.custominput ')
 
-//         }).then(function(){
-//             return page.type('.input.text-area.custominput ',ans)
-//         }).then(function(){
-//            let controlPressed = page.keyboard.down('Control');
-//            return controlPressed;
-//     }).then(function(){
-//         let Apressed = page.keyboard.press('A')
+        }).then(function(){
+            return page.type('.input.text-area.custominput ',ans)
+        }).then(function(){
+           let controlPressed = page.keyboard.down('Control');
+           return controlPressed;
+    }).then(function(){
+        let Apressed = page.keyboard.press('A')
         
-//     }).then(function(){
-//         let cut = page.keyboard.press('X',{delay:20000})
-//         return cut;
-//     }).then(function(){
-//        let controlRelease = page.keyboard.up('Control')
-//        return controlRelease;
-//     }).then(function(){
-//         let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
-//         // console.log("clicked")
-//         return waitforEditorPromise;
-//     }).then(function(){
-//         let controlPressed = page.keyboard.down('Control');
-//         return controlPressed;
-//  }).then(function(){
-//      let Apressed = page.keyboard.press('A',{delay:5})
+    }).then(function(){
+        let cut = page.keyboard.press('X',{delay:20000})
+        return cut;
+    }).then(function(){
+       let controlRelease = page.keyboard.up('Control')
+       return controlRelease;
+    }).then(function(){
+        let waitforEditorPromise = waitAndclick('[class="monaco-editor no-user-select  vs"]',page)
+        // console.log("clicked")
+        return waitforEditorPromise;
+    }).then(function(){
+        let controlPressed = page.keyboard.down('Control');
+        return controlPressed;
+ }).then(function(){
+     let Apressed = page.keyboard.press('A',{delay:5})
      
-//  }).then(function(){
-//     let pressV = page.keyboard.press('V',{delay:5});
-//  }).then(function(){
-//     let controlRelease = page.keyboard.up('Control');
-//  }).then(function(){
-//     return page.click('[class="ui-btn ui-btn-normal ui-btn-primary pull-right hr-monaco-submit ui-btn-styled"]',{delay:5})
-//  }).then(function(){
-//     resolve();
-//  }).catch(function(){
-//     reject();
-//  })
-// })}
+ }).then(function(){
+    let pressV = page.keyboard.press('V',{delay:5});
+ }).then(function(){
+    let controlRelease = page.keyboard.up('Control');
+ }).then(function(){
+    return page.click('[class="ui-btn ui-btn-normal ui-btn-primary pull-right hr-monaco-submit ui-btn-styled"]',{delay:5})
+ }).then(function(){
+    resolve();
+ }).catch(function(){
+    reject();
+ })
+})}

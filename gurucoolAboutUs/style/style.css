@@ -311,10 +311,4 @@
 }
 .team__footer i {
   margin: 0 12px;
-}
-
-@media only screen and (max-width: 600px) {
-  .mainScreen {
-    display: none;
-  }
 }/*# sourceMappingURL=style.css.map */
