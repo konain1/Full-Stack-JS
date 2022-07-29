@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .double {
+        width: 60px;
+        height: 20px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="doubleHolder">
+      <button class="double">double</button>
+    </div>
+
+    <script>
+      //    Q Create a button that is destroyed by clicking on it but two new buttons are created in it's place.
+
+      //   Solution:
+      // document
+      //   .querySelector("#doubleHolder")
+      //   .addEventListener("click", function (e) {
+      //     if (e.target.classList.contains("double")) {
+      //       let btn = document.createElement("button");
+      //       btn.setAttribute("class", "double");
+      //       btn.innerHTML = "double";
+
+      //       let btn2 = document.createElement("button");
+      //       btn2.setAttribute("class", "double");
+      //       btn2.innerHTML = "double";
+      //       e.currentTarget.appendChild(btn);
+      //       e.currentTarget.appendChild(btn2);
+      //       e.currentTarget.removeChild(e.target);
+      //     }
+      //   });
+
+      let body = document.querySelector("body");
+
+      let btns = document.querySelectorAll("button");
+      console.log(btns.length)
+
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function (e) {
+            let val = e.currentTarget.getAttribute('class')
+            console.log(val)
+          if (e.currentTarget.getAttribute("class") == "double") {
+            console.log("getAttr");
+           
+            // destroy();
+          }else {
+            creating();
+          }
+          
+
+          
+        });
+
+        function destroy() {
+            for(let i = 0;i<btns.length;i++){
+                console.log("btn delelted");
+                 btns[i].remove();
+            }
+          
+        }
+      }
+
+      function creating() {
+        let CreatedBtn = document.createElement("button");
+        CreatedBtn.setAttribute("class", "double");
+
+        let CreatedBtn2 = document.createElement("button");
+        CreatedBtn2.setAttribute("class", "double");
+
+        body.appendChild(CreatedBtn2);
+        body.appendChild(CreatedBtn);
+
+      console.log(btns.length)
+
+        //    body.appendChild(CreatedBtn);
+      }
+    </script>
+  </body>
+</html>
