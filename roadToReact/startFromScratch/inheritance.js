@@ -4,7 +4,13 @@ class Person {
     constructor(Name,Age){
         this.name = Name
         this.age = Age
+
+
     }
+    welcome(){
+        console.log('welcome '+this.name)
+    }
+    
 }
 
 class Player extends Person {
@@ -20,11 +26,18 @@ class Coach extends Person {
         super(name,age);
         this.formation = formation
     }
+
+        hello(){
+            super.welcome();
+        }
 }
 
 let p1 = new Person('messi',34);
 let ansu = new  Player('Ansu',18,'LW')
 let xavi = new Coach('xavi',37,433);
 
-console.log(ansu)
-console.log(xavi);
+// console.log(ansu)
+// console.log(xavi);
+p1.welcome()
+
+xavi.hello();
