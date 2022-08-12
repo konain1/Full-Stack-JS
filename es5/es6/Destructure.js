@@ -16,10 +16,20 @@ console.log(car3);
 
 let person ={
     Name:'konain',
-    city:'delhi'
+    city:'delhi',
+    school:{
+        primary:'sgd school',
+        high : 'insan school'
+    },
+    pin:122330
 }
 
-let {Name,city} = person;
+let {Name,city,pin} = person;
+
+let {school:{primary:skool , high}} = person
+
+console.log(skool,high)
+console.log(pin)
 
 
 console.log("person property "+Name)
