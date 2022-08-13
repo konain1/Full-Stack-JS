@@ -38,7 +38,9 @@ body {
     height: 80vh;
     width: 30vw;
     border: 1px solid white;
-    /* display: flex; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 
 }
@@ -55,13 +57,13 @@ body {
     
 }
 .ticket-Stack{
-    background-color: #bf9f63;
+    background-color: #2a2a2a;
     height: 60%;
     display: flex;
-    align-items: center;
     justify-content: center;
-
-   
+    /* align-items: center; */
+    padding:40px;
+    box-sizing: border-box;
     
 }
 ul {
@@ -170,4 +172,8 @@ li {
 }
 .heading-inputArea {
     font-size: 4rem;
+}
+
+.stack-content {
+   
 }
