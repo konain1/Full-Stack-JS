@@ -64,6 +64,7 @@ body {
     /* align-items: center; */
     padding:40px;
     box-sizing: border-box;
+    overflow: hidden;
     
 }
 ul {
@@ -130,7 +131,10 @@ li {
     cursor: pointer;
     
 }
-
+.add-btn:active, .remove-btn:active{
+transform: scale(0.90, 0.90);
+outline-style:groove;
+}
 .remove-btn {
     width: 100px;
     display: flex;
@@ -174,6 +178,16 @@ li {
     font-size: 4rem;
 }
 
-.stack-content {
-   
+.todoDiv {
+    height: 20px;
+    width: min-content;
+    background-color:#bf9f63;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    padding: 1rem;
+    margin: 2rem;
+    color: #000;
+    
 }
+
+
