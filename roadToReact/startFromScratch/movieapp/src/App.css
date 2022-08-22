@@ -66,8 +66,29 @@
 .moviesList {
    display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
-    padding: 1rem;
-    color: red;
+    flex-wrap: wrap;
     gap: 1rem;
+    margin: 2rem;
+}
+
+.movie-card {
+  position: relative;
+  width: 20vw;
+  height: max-content;
+  margin: 1.5rem;
+  /* display: flex;
+  
+  align-items: center; */
+  height: 20vh;
+}
+.card-title {
+  position: absolute;
+  color: white;
+  top: 1rem;
+  left: 1rem;
+}
+.movie-btn{
+  position: absolute;
+  bottom: 1.5rem;
+
 }

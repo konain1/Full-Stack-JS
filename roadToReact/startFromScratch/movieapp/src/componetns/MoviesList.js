@@ -15,16 +15,34 @@ export class MoviesList extends Component {
 
       <div className='moviesList'>
       {moviesArr.map((ele)=>(
-        <div classname="card " style={{width:"18rem"}}>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPuiCvkZy2jrZvGEWlUrejv3ygarS-1TJJw&usqp=CAU" className="card-img-top" alt="..."/>
-        <div className="card-body">
-          <h5 className="card-title">{ele.title}</h5>
+        <div className="card movie-card">
+        <img src={`https://image.tmdb.org/t/p/original${ele.backdrop_path}`} className="card-img-top" alt="..."/>
+        <h5 className="card-title " >{ele.title}</h5>
+
+        <div className='button-wrap' style={{display:'flex' , justifyContent:'center'}}> <a href="#" class="btn btn-primary movie-btn">Add to Favourite</a>
         </div>
+
+
+       
       </div>
+        
+      
         
       ))}
       
       </div>
+
+      <div style={{display:'flex' , justifyContent:'center'}}>
+      <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+    </div>
       </>
     )
   }
