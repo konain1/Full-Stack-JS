@@ -61,11 +61,22 @@ body {
     height: 60%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     padding:40px;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-y: scroll;
+    width: 25vw;
+    flex-wrap: wrap;
     
+    
+    }
+   .ticket-Stack::-webkit-scrollbar {
+        width: 1px;} 
+    
+
+.price-cont {
+    width: 100%;
+    background-color: #3a3a3a;
 }
 ul {
     width: 100%;
@@ -135,6 +146,7 @@ li {
 transform: scale(0.90, 0.90);
 outline-style:groove;
 }
+
 .remove-btn {
     width: 100px;
     display: flex;
@@ -173,19 +185,29 @@ outline-style:groove;
     font-size: 1.5rem;
     justify-content: center ;
     text-align: center;
+    cursor: pointer;
+   
+}
+.member:active{
+    transform: scale(0.90, 0.90);
+}
+.member:hover{
+    background-color: #3a3a3a;
+    width:250px;
 }
 .heading-inputArea {
     font-size: 4rem;
 }
 
 .todoDiv {
-    height: 20px;
+    height: 2px;
+    display: inline-block;
     width: min-content;
     background-color:#bf9f63;
     /* display: flex; */
     /* flex-wrap: wrap; */
     padding: 1rem;
-    margin: 2rem;
+    margin: 1.5rem;
     color: #000;
     
 }
