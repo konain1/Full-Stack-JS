@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+.myCont {
+  height: 70vh;
+  background-color: aliceblue;
+  
+}
+.myFirstColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frontImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  margin-top:calc(45%);
+}
+.frontImg  img{
+  height: 200px;
+  
+}
+.howMomentWork {
+  margin-top: 12rem;
+  border: 1px solid black;
+}
+.myCont2{
+  height: 40rem;
+  background-color: #FFF3CD;
+  margin-bottom: 4rem;
+  border: 1px solid black;
+}
+.myRow2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 4rem;
+}
+.myColumn2 {
+  width:18rem !important;
+  flex: unset !important;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  position: relative;
+  padding: 1rem;
+ 
+}
+.howWorkCont{
+  background-color:#FFF3CD;
+}
+
+.col-circle{
+  padding: 1rem;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: auto;
+}
+.description{
+  padding: 1rem;
+}

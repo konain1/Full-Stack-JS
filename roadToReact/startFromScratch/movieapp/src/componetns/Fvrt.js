@@ -36,7 +36,7 @@ export class Fvrt extends Component {
       }
     })
 
-    console.log('--<>> ',TempArr)
+   
     return (
       <>
         <div className="main-cont">
