@@ -2,7 +2,19 @@ import { getRoles } from "@testing-library/react";
 import React, { Component } from "react";
 import { movies } from "../movieData";
 
+
 export class Fvrt extends Component {
+
+  constructor(){
+    super()
+
+    this.state ={
+      genre :[],
+      currentgenre : 'all genre'
+    }
+  }
+  
+
   render() {
     let localMoviesData = movies.results;
 
@@ -36,6 +48,8 @@ export class Fvrt extends Component {
       }
     })
 
+    TempArr.unshift('all genre')
+
    
     return (
       <>
@@ -43,9 +57,11 @@ export class Fvrt extends Component {
           <div className="row">
             <div className="col-3">
               <ul className="list-group fvrt-ul">
-                <li className="list-group-item">all genre</li>
+                {/* <li className="list-group-item">all genre</li> */}
                {  TempArr.map((ele)=>(
-                <li className="list-group-item">{ele}</li>
+                this.state.currentgenre == ele?
+                <li style={{background:'grey', color:'white'}} className="list-group-item">{ele}</li>:
+                <li style={{color:'grey'}} className="list-group-item">{ele}</li>
                ))}
               </ul>
             </div>

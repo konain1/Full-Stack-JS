@@ -4,18 +4,24 @@ import Navbar from './componetns/Navbar';
 import Banner from './componetns/Banner';
 import MoviesList from './componetns/MoviesList';
 import Fvrt from './componetns/Fvrt';
+import { BrowserRouter , Routes , Route} from 'react-router-dom'
 
 
 function App() {
   return (
-    <div className="App">
-     
-     <Navbar/>
-    {/* <Banner/>
-    <MoviesList/> */}
-    <Fvrt/>
+    < BrowserRouter >
 
-    </div>
+    <Routes>
+    <Route path='/' element={<> <Banner/> <Navbar/><MoviesList/> </>}/>
+    <Route path='favourite' element={<>  <Navbar/>   <Fvrt/>     </>} />
+    </Routes>
+    
+     
+    
+    
+    
+
+    </ BrowserRouter>
   );
 }
 
