@@ -10,7 +10,8 @@ export class MoviesList extends Component {
       hover: "",
       parr: [1],
       movies: [],
-      currPage :1
+      currPage :1,
+      favourites:[]
     };
   }
 
@@ -19,7 +20,7 @@ export class MoviesList extends Component {
       `https://api.themoviedb.org/3/movie/popular?api_key=eb29820ff34c7a78e2eed374a36d8824&language=en-US&page=${this.state.currPage}`
     );
     const apiMovieData = res.data;
-    console.log(apiMovieData);
+    // console.log(apiMovieData);
 
     this.setState({
       movies: [...apiMovieData.results],
@@ -30,7 +31,7 @@ export class MoviesList extends Component {
       `https://api.themoviedb.org/3/movie/popular?api_key=eb29820ff34c7a78e2eed374a36d8824&language=en-US&page=${this.state.currPage}`
     );
     const apiMovieData = res.data;
-    console.log(apiMovieData);
+    // console.log(apiMovieData);
 
     this.setState({
       movies: [...apiMovieData.results],
@@ -43,7 +44,7 @@ export class MoviesList extends Component {
       tempArr.push(i);
       
     }
-    console.log(tempArr+"---->>>>");
+    // console.log(tempArr+"---->>>>");
 
     this.setState({
       parr : [...tempArr],
@@ -52,7 +53,7 @@ export class MoviesList extends Component {
       
     },this.changeMovies)
    
-    console.log(this.state.currPage)
+    // console.log(this.state.currPage)
    
   };
 
@@ -72,6 +73,41 @@ export class MoviesList extends Component {
       },this.changeMovies)
     }
   }
+
+  handleFvrt = (movieObj)=>{
+
+    let oldData = JSON.parse(localStorage.getItem('movies-app') || '[]')
+
+    if(this.state.favourites.includes(movieObj.id)){
+      // if id not equal then donot remove nor remove same id movies
+      oldData = oldData.filter((m)=> m.id != movieObj.id
+      )
+    }else {
+      oldData.push(movieObj)
+    }
+    // localStorage.clear();
+    localStorage.setItem('movies-app',JSON.stringify(oldData)) 
+
+    console.log(oldData)
+   this.handleFvrtState()
+    
+  }
+
+  handleFvrtState = ()=>{
+
+    let oldData = JSON.parse(localStorage.getItem('movies-app') || '[]')
+
+    let temp = oldData.map((m)=>m.id)
+
+
+    this.setState({
+      favourites :[...temp]
+    })
+    
+
+  }
+
+ 
   render() {
     return (
       <>
@@ -97,11 +133,13 @@ export class MoviesList extends Component {
                 className="button-wrap"
                 style={{ display: "flex", justifyContent: "center" }}
               >
-                {this.state.hover == ele.id && (
-                  <a href="#" class="btn btn-primary movie-btn">
-                    Add to Favourite
+                {this.state.hover == ele.id && 
+                  <a  class="btn btn-primary movie-btn" onClick={()=>this.handleFvrt(ele)}>
+
+                  {this.state.favourites.includes(ele.id)?"Remove from Favourite" : "Add to Favourite"}
+                  
                   </a>
-                )}
+                  }
               </div>
             </div>
           ))}
