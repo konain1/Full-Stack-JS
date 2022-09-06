@@ -11,7 +11,8 @@ export class Fvrt extends Component {
     this.state ={
       genre :[],
       currentgenre : 'all genre',
-      localFvrtMovies : []
+      localFvrtMovies : [],
+      searchText:'',
     }
   }
   
@@ -63,6 +64,46 @@ export class Fvrt extends Component {
     })
   }
 
+  sortPopularityAsc=()=>{
+    let temp = this.state.localFvrtMovies
+     temp.sort((a,b)=> {
+      return  a.popularity - b .popularity
+    })
+
+    this.setState({
+      localFvrtMovies : [...temp]
+    })
+  }
+
+  sortPopularityDesc=()=>{
+    let temp = this.state.localFvrtMovies
+    temp.sort(function(objA , objB){
+       return objB.popularity-objA.popularity
+    })
+
+    this.setState({
+      localFvrtMovies : [...temp]
+    })
+ }
+sortRatingDesc=()=>{
+  let temp = this.state.localFvrtMovies
+  temp.sort((a,b)=> a.vote_average - b.vote_average )
+
+  this.setState({
+    localFvrtMovies : [...temp]
+  })
+
+}
+
+sortRatingAsc=()=>{
+  let temp = this.state.localFvrtMovies
+  temp.sort((a,b)=> b.vote_average - a.vote_average )
+
+  this.setState({
+    localFvrtMovies : [...temp]
+  })
+
+}
   render() {
 
     let genreids = {
@@ -89,15 +130,25 @@ export class Fvrt extends Component {
 
    
     let filterArr = []
-    
-    if(this.state.currentgenre=='all genre'){ 
-      filterArr = this.state.localFvrtMovies  
-  }else {
-    filterArr = this.state.localFvrtMovies.filter((movieobj)=>genreids[movieobj.genre_ids[0]] == this.state.currentgenre)
 
+
+
+   
+   
+
+  if(this.state.searchText === ''){
+    filterArr = this.state.localFvrtMovies
+  }else {
+    filterArr = this.state.localFvrtMovies.filter((moviesObj)=>{
+      let title = moviesObj.original_title.toLowerCase();
+      return title.includes(this.state.searchText.toLowerCase().trim());
+    })
   }
 
-    
+  if(this.state.currentgenre !=='all genre'){ 
+    filterArr = this.state.localFvrtMovies.filter((movieobj)=>genreids[movieobj.genre_ids[0]] == this.state.currentgenre)
+}
+  
 
    
     return (
@@ -118,7 +169,7 @@ export class Fvrt extends Component {
             </div>
             <div className="col-9 fvrt-movies">
               <div className="row">
-                <input type="text" className="input-group-text col" />
+                <input type="text" placeholder="searchText" className="input-group-text col"    onChange={(e)=> this.setState({searchText : e.target.value}) }/>
                 <input type="number" className="input-group-text col" />
               </div>
               <div className="row">
@@ -128,8 +179,8 @@ export class Fvrt extends Component {
                       <th></th>
                       <th scope="col">Title</th>
                       <th scope="col">Genre</th>
-                      <th scope="col">Popularity</th>
-                      <th scope="col">Rating</th>
+                      <th scope="col"><i class="fa-solid fa-sort-up" onClick={this. sortPopularityDesc}></i> Popularity <i class="fa-solid fa-sort-down" onClick={this.sortPopularityAsc}></i></th>
+                      <th scope="col"><i class="fa-solid fa-sort-up" onClick={this. sortRatingDesc}></i> Rating<i class="fa-solid fa-sort-down" onClick={this.sortRatingAsc}></i></th>
                       <th scope="col"></th>
                     </tr>
                   </thead>
