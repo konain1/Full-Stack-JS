@@ -10,13 +10,60 @@ export class Fvrt extends Component {
 
     this.state ={
       genre :[],
-      currentgenre : 'all genre'
+      currentgenre : 'all genre',
+      localFvrtMovies : []
     }
   }
   
+  componentDidMount(){
+
+    let genreids = {
+      28: "Action",
+      12: "Adventure",
+      16: "Animation",
+      35: "Comedy",
+      80: "Crime",
+      99: "Documentary",
+      18: "Drama",
+      10751: "Family",
+      14: "Fantasy",
+      36: "History",
+      27: "Horror",
+      10402: "Music",
+      9648: "Mystery",
+      10749: "Romance",
+      878: "Sci-Fi",
+      10770: "TV",
+      53: "Thriller",
+      10752: "War",
+      37: "Western",
+    };
+    let data = JSON.parse(localStorage.getItem('movies-app') || '[]') 
+    let TempArr = []
+    data.map((ele)=>{
+      if(!TempArr.includes(genreids[ele.genre_ids[0]])){
+        TempArr.push(genreids[ele.genre_ids[0]])
+      }
+    })
+
+    TempArr.unshift('all genre')
+
+    this.setState({
+      localFvrtMovies:[...data],
+      genre:[...TempArr]
+    })
+
+
+  }
+
+  handleGenreChange=(genre) =>{
+
+    this.setState({
+      currentgenre : genre
+    })
+  }
 
   render() {
-    let localMoviesData = movies.results;
 
     let genreids = {
       28: "Action",
@@ -40,15 +87,17 @@ export class Fvrt extends Component {
       37: "Western",
     };
 
-    let TempArr = []
+   
+    let filterArr = []
+    
+    if(this.state.currentgenre=='all genre'){ 
+      filterArr = this.state.localFvrtMovies  
+  }else {
+    filterArr = this.state.localFvrtMovies.filter((movieobj)=>genreids[movieobj.genre_ids[0]] == this.state.currentgenre)
 
-    localMoviesData.map((ele)=>{
-      if(!TempArr.includes(genreids[ele.genre_ids[0]])){
-        TempArr.push(genreids[ele.genre_ids[0]])
-      }
-    })
+  }
 
-    TempArr.unshift('all genre')
+    
 
    
     return (
@@ -58,10 +107,12 @@ export class Fvrt extends Component {
             <div className="col-3">
               <ul className="list-group fvrt-ul">
                 {/* <li className="list-group-item">all genre</li> */}
-               {  TempArr.map((ele)=>(
+               {  this.state.genre.map((ele)=>(
                 this.state.currentgenre == ele?
+
                 <li style={{background:'grey', color:'white'}} className="list-group-item">{ele}</li>:
-                <li style={{color:'grey'}} className="list-group-item">{ele}</li>
+
+                <li style={{color:'grey'}} className="list-group-item" onClick={()=>this.handleGenreChange(ele)} > {ele} </li>
                ))}
               </ul>
             </div>
@@ -83,7 +134,7 @@ export class Fvrt extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {localMoviesData.map((ele) => (
+                    {filterArr.map((ele) => (
                       <tr>
                         <td> <img style={{width:'6rem'}} src={`https://image.tmdb.org/t/p/original${ele.backdrop_path}`}/></td>
                         <th scope="row">
