@@ -149,7 +149,26 @@ sortRatingAsc=()=>{
     filterArr = this.state.localFvrtMovies.filter((movieobj)=>genreids[movieobj.genre_ids[0]] == this.state.currentgenre)
 }
   
+let handleDelete=(delId)=>{
+  let movieList = JSON.parse(localStorage.getItem('movies-app'))
 
+  const modifiedMovieList = movieList.filter(obj => {
+    console.log(obj)
+    return obj.original_title !== delId.original_title
+  });
+  this.setState({
+    ...this.state,
+    localFvrtMovies: [...modifiedMovieList]
+  })
+  // this.state = {
+  //   ...this.state,
+  //   localFvrtMovies: [...modifiedMovieList]
+  // }
+  localStorage.setItem('movies-app',JSON.stringify(modifiedMovieList));
+  // let movieDel = JSON.parse(localStorage.getItem(delId.original_title)) 
+
+  console.log(JSON.parse(localStorage.getItem('movies-app')),this.state)
+}
    
     return (
       <>
@@ -196,7 +215,7 @@ sortRatingAsc=()=>{
                         <td>{ele.popularity}</td>
                         <td>{ele.vote_average}</td>
                         <td>
-                          <button type="button" class="btn btn-danger">
+                          <button type="button" class="btn btn-danger" onClick={()=>{handleDelete(ele)}}>
                             Delete
                           </button>
                         </td>
