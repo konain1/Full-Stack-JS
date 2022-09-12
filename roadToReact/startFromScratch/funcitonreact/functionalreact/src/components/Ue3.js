@@ -16,7 +16,7 @@ function Ue3() {
     <button onClick={()=>setcounterfn(count+1)}>click</button>
     <button onClick={()=>setName('konain')}>changeName</button>
 
-    <p>{count} {name}</p>
+    <p>{count} {name}</p> 
 
     </div>
   )
