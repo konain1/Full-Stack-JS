@@ -1,0 +1,23 @@
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --pureGrey:##a4b0be
+}
+
+.cont {
+  background-color: aqua;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  
+}
+
+.cont__item {
+  height: 10vh;
+  width: 12vh;
+  background-color:yellow;
+  color:var(--pureGrey);
+  border:1px solid black;
+}
