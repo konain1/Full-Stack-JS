@@ -16,7 +16,7 @@ function Ue2() {
     <p>{count}</p>
 
     </div>
-  )
+  ) 
 }
 
 export default Ue2

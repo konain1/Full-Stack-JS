@@ -17,6 +17,6 @@ function Ue1() {
 
     </div>
   )
-}
+} 
 
 export default Ue1
