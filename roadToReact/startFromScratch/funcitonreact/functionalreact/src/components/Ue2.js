@@ -8,8 +8,6 @@ function Ue2() {
         document.title = `this is useEffect ${count}`
     },[])//dependany array or list if it is empty it will work as componentdidmount
   return (
-
-    
     <div>
     <h1>useEffect []dependancy array  == componentdidmount</h1>
     <button onClick={()=>setcounterfn(count+1)}>click</button>
