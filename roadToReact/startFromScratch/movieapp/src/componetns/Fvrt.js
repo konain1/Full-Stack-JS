@@ -189,7 +189,7 @@ let handleDelete=(delId)=>{
             <div className="col-9 fvrt-movies">
               <div className="row">
                 <input type="text" placeholder="searchText" className="input-group-text col"    onChange={(e)=> this.setState({searchText : e.target.value}) }/>
-                <input type="number" className="input-group-text col" />
+                {/* <input type="number" className="input-group-text col" /> */}
               </div>
               <div className="row">
                 <table class="table">
