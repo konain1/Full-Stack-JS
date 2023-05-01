@@ -1,10 +1,9 @@
 import './App.css';
-import Container from './pages/Container';
+import Nav from './components/menu/Nav';
 function App() {
   return (
     <div className="App">
-     <Container/>
-
+     <Nav></Nav>
     </div>
   );
 }
