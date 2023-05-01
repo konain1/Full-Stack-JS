@@ -1,7 +1,6 @@
 import React from 'react'
 import {MenuItems} from "./Menu"
-import { Link } from 'react-router-dom';
-import './Nav.css'
+import './Nav.scss'
 import {useState} from 'react'
 
 
