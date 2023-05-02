@@ -21,25 +21,31 @@
 
         cName:"data-links"
     },
-    {
-        title:"Learn English in Proper Enviroment with Games , Activitiy and Multimedia",
-
-        cName:"data-links"
-    },
+   
     {
         title:"Vocabulary Building",
 
         cName:"data-links"
     },
     {
-        title:"Learn Interview and Job Skills",
+        title:" Interview and Job Skills",
 
         cName:"data-links"
     },
     {
-        title:"Learn Discussion and Debate Skills",
+        title:" Discussion and Debate Skills",
 
         cName:"data-links"
-    }
+    }, 
+    {
+        title:"Proper English Enviroment",
+
+        cName:"data-links"
+    },
+    {
+        title:" Learn with Games and multimedia",
+ 
+        cName:"data-links"
+    },
 
 ]

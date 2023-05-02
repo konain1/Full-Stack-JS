@@ -1,0 +1,103 @@
+
+.attr {
+
+    display: flex;
+    justify-content: center;
+    // border :1px solid rgb(30, 29, 29);
+    align-items: center;
+    margin-top: 10%;
+    background: #3a4042;
+    justify-content: center;
+    &__child{
+        // background-color: rgb(220, 202, 202);
+    //    border:1px solid white;
+       display: flex;
+        width: 25%;
+        height: 200px;
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+            flex-direction: column;
+            gap: 10px;
+            li{
+                font-size: 12px;
+                color: white;
+                i {
+                    color:#d7c823;
+                }
+            }
+    }
+}
+}
+
+@media screen and (max-width:767px) {
+    .attr{
+
+      margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #3a4042;
+
+        overflow:hidden;
+        &__child{
+
+            background: #3a4042;
+            width: 30%;
+            height: 100%;
+          
+
+            ul{
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                    font-size: 0.6rem;
+                    color: white;
+                    padding: 0px 10px;
+                    // flex-wrap: wrap;
+                    i {
+                        color:#d7c823;
+
+                    }
+                }
+        }
+    }
+}
+}
+
+
+@media screen and (max-width:350px){
+
+    .attr{
+
+    
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        li{
+            font-size: 0.3rem;
+            color: white;
+            padding: 0px 10px;
+            // flex-wrap: wrap;
+            i {
+                color:#d7c823;
+
+            }
+        }
+}
+    }
+
+}

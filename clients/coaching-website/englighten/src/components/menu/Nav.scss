@@ -10,6 +10,7 @@
 }
 .navbar-logo {
     color: white;
+    // color: black;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -20,13 +21,15 @@
     justify-content: end;
     align-items: center;
     list-style: none;
-    width: 70vw;
+    width: 70%;
     gap: 10px;
+    // border: 1px solid white;
 
 }
 .nav-links  {
     text-decoration: none;
     color: white;
+    // color: black;
     padding: 0.5rem 1rem;
     border-radius: 4px;
 }
