@@ -1,6 +1,6 @@
 import React from 'react'
 import './Container.scss'
-
+import Button from '../button/Button'
 function Container() {
   return (
     <>
@@ -13,10 +13,11 @@ function Container() {
             <div className='container__text_p'>
                 <p>Join a community of learners and master English speaking with our interactive and engaging coaching sessions</p>
             </div>
+                <Button/>
             </div>
            
             <div className='container__img-cont'> 
-            <img src='/student.png' />
+              <img src='/student.png' />
             </div>
 
         </div>

@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-around;
     // border: 1px solid black;
+    background-color: black;
     margin-top: 100px;
 
     &__text-cont{
@@ -14,14 +15,55 @@
         width: 40%;
         padding: 0px 30px;
         // border: 1px solid black;
+        color: white;
         
     }
 
     &__img-cont {
-       height: 600px;
+       height: 40vh;
        img{
         height: 100%;
        }
     }
 
+}
+
+// media query
+
+
+@media  screen and (max-width:767px){
+
+    .container {
+        
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid white;
+        margin: 0px auto;
+
+        &__text-cont{
+        }
+
+        &__text_headline{
+            font-size: 0.9rem;
+            // border: 1px solid white;
+        }
+
+        &__text_p{
+            font-size: 0.4rem;
+            width: 140px;
+        }
+        &__img-cont{
+            display: none;
+            height:20vh;
+            img{
+                height: 100%;
+            }
+        }
+
+       
+    }
 }
