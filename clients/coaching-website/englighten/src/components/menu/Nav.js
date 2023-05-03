@@ -16,7 +16,7 @@ function Nav() {
     <>
         <nav className='NavbarItems'>
 
-        <h1 className='navbar-logo'>logo</h1>
+        <h1 className='navbar-logo'><span>E</span>nlighten</h1>
 
         <div className='menu-icon' onClick={clickedHandler}>
         <i className={clicked == true ?'fa-solid fa-xmark' :'fa-solid fa-bars' }></i>

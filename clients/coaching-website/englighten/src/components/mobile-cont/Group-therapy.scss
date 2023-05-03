@@ -22,11 +22,14 @@
     }
 
     &__text{
-        padding: 0px 60px;
+        padding: 20px 60px;
         width: 50%;
         color: white;
-        font-size: 1rem;
+        font-size:0.8rem;
         line-height: 1.4;
+        
+        
+       
     }
 }
 
@@ -58,8 +61,11 @@
         padding: 0px 20px;
         // width: 50%;
         color: white;
-        font-size: 0.5rem;
+        
         line-height: 1.5;
+        p{
+        font-size: 0.5rem;
+        }
     }
 
 
@@ -113,12 +119,12 @@
         background: #629494; 
 
     }
-    .group__text{
+    .group2__text{
         padding: 0px 10px;
         // width: 50%;
         color: white;
-        font-size: 0.4rem;
-        line-height: 1;
+        display: none;
+        // line-height: 1;
         // border: 1px solid white;
         display: flex;
         align-items: center;

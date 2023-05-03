@@ -14,6 +14,10 @@
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
+    span {
+        color: red;
+        font-size: 14px;
+    }
 } 
 
 .nav-menu {
@@ -24,18 +28,39 @@
     width: 70%;
     gap: 10px;
     // border: 1px solid white;
-
+   
 }
+
 .nav-links  {
     text-decoration: none;
     color: white;
-    // color: black;
-    padding: 0.5rem 1rem;
+  
+    padding: .5rem 3rem;
+   
     border-radius: 4px;
+    display: flex;
+    // flex: 1;
+    // justify-content: space-between;
+    // width: 100%;
+   
+   
+    
 }
 .nav-links:hover {
-    background-color: #6d76f7;
+    // background-color: #6d76f7;
+    // background-color: #987195;
+    background-color:#9B89B3 ;
+
+    
+    // font-size: 12px;
+    // padding: .5rem 2rem;
+   
+    // width: 100%;
+    display: flex;
     transition: all 0.2s ease-out;
+    justify-content: center;
+    align-items: center;
+    
 }
 .fa-bars,.fa-xmark {
     color: white;
@@ -54,41 +79,57 @@
     
     .NavbarItems {
         position: relative;
-        
-        
     }
     .nav-menu {
         display: flex;
         flex-direction: column;
         /* width: 400px; */
-        height: 300px;
+        // height: 300px;
         position: absolute;
-        top: 80px;
+        top: 10px;
         left: -100%;
         /* opacity: 1; */
         transition: all 0.5s ease;
+        li{
+       
+            width: 80%;
+        }
         
     }
     .nav-menu.active{
-        background: #aeafc9;
+        // background: #aeafc9;
+        background-image: linear-gradient(to right top, #051937, #0d142b, #0e0f1f, #0a0814, #020202);
         /* width: 400px; */
+        opacity: 0.9;
         left: 0;
         /* opacity: 1; */
         transition: all 0.5s ease;
         /* z-index: 1; */
+        display: flex;
+        justify-content: center;
         border-radius: 6px;
+        align-items: start;
       
     }
     .nav-links{
-        display: table;
-        text-align: center;
-        padding: 2rem;
+        display: flex;
+        // text-align: center;
+        padding: 2rem 2rem;
+        // width: 200px;
+        color: white;
+        // border: 1px solid black;
+        font-weight: 700;
+       
+        cursor: pointer;
        
         
     }
     .nav-links:hover{
-        background-color: #7577fa;
+        // background-color: #7577fa;
+        // background-color: #987195;
         border-radius: 0;
+        cursor: pointer;
+      
     }
     .menu-icon {
         display: block;

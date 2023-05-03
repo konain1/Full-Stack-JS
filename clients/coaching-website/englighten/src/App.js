@@ -4,6 +4,11 @@ import Container from './components/container/Container';
 import Attr_cont from './components/Attractive-cont/Attr_cont';
 import Group_study from './components/mobile-cont/Group_study';
 import Group_therapy from './components/mobile-cont/Group_therapy';
+import Footer from './components/footer/Footer';
+
+
+
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +19,7 @@ function App() {
      <Attr_cont/>
      <Group_study/>
      <Group_therapy/>
+    <Footer/>
      
     </div>
   );

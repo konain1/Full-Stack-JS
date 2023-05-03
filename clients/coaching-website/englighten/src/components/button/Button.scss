@@ -1,26 +1,61 @@
 
 .btn{
-    width: 140px;
-    height: 40px;
-    border: 1px slid black;
+    // width: 160px;
+    // height: 50px;
+    // border: 1px slid black;
+    outline: none;
     text-align: center;
     background-color: transparent;
+    padding: 10px 60px;
+    border-radius: 10px;
+    // background-color: #9B89B3;   
     a{
         text-decoration: none;
-        color: white;
+        color: rgb(87, 111, 161);
 
     }
+
 }
 .btn:hover {
     background-color:#9B89B3 ;
+    color: white;
+    a{
+        color: white;
+    }
 }
+
+// .btn:hover {
+//     background: linear-gradient(
+//         120deg,
+//         #eeebf1 30%,
+//         #f0f0f0  45%,
+//         #f0f0f0 38%,
+//         #6e6161 48%
+
+//     );
+//     background-size: 50% 100%;
+//     background-position: 100% 0;
+//     animation:  animate 9s infinite;
+// }
+
+// @keyframes animate {
+//     100%{
+        
+//         background-position: -100% 0;
+//     }
+// }
+
+
+
 
 @media screen and (max-width:767px) {
     .btn{
-        width: 70px;
-        height: 20px;
+        // width: 70px;
+        // height: 20px;
         text-align: center;
         background-color: transparent;
+        padding: 5px 20px;
+        border-radius: 10px;
 
         a{
             text-decoration: none;
