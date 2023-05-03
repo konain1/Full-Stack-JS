@@ -1,13 +1,11 @@
 
 
+
 .container {
     display: flex;
     justify-content: space-around;
-    // border: 1px solid black;
-    // background-color: rgb(123, 121, 121);
-    // background-color: black;
     background: #212121;
-
+    // background-image: linear-gradient(to right top, #051937, #0d142b, #0e0f1f, #0a0814, #020202);
     margin-top: 100px;
 
     &__text-cont{
@@ -19,13 +17,14 @@
         padding: 0px 30px;
         // border: 1px solid black;
         color: white;
+        font-family: 'Cormorant SC', serif
         
     }
 
     &__img-cont {
-       height: 40vh;
+    //    height: 40vh;
        img{
-        height: 100%;
+        height: 400px;
         filter: drop-shadow(8px 30px 0px #000);
     
     
@@ -43,7 +42,7 @@
         
         width: fit-content;
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         gap:30px;
         justify-content: center;
         align-items: center;
@@ -51,11 +50,15 @@
         margin: 40px auto;
 
         &__text-cont{
+            font-family: 'Cormorant SC', serif;
+           
         }
 
         &__text_headline{
             font-size: 0.9rem;
             // border: 1px solid white;
+            font-family: 'Cormorant SC', serif;
+            
         }
 
         &__text_p{
@@ -63,10 +66,54 @@
             width: 140px;
         }
         &__img-cont{
-            display: none;
-            height:20vh;
+            // display: none;
+            // height:20vh;
             img{
-                height: 100%;
+                height: 200px;
+            }
+        }
+
+       
+    }
+}
+
+
+
+
+@media  screen and (max-width:500px){
+
+    .container {
+        
+        width: fit-content;
+        display: flex;
+        // flex-direction: column;
+        gap:30px;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid white;
+        margin: 40px auto;
+
+        &__text-cont{
+            font-family: 'Cormorant SC', serif;
+            
+        }
+
+        &__text_headline{
+            font-size: 1rem;
+            // border: 1px solid white;
+            font-family: 'Cormorant SC', serif;
+            
+        }
+
+        &__text_p{
+            font-size: 0.4rem;
+            // width: 140px;
+        }
+        &__img-cont{
+            display: none;
+            // height:20vh;
+            img{
+                height: 100px;
             }
         }
 

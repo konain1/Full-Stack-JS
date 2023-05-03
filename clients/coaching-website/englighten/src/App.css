@@ -4,7 +4,10 @@
 .App {
   text-align: center;
   background-color: black;
-  background: #212121;
+  /* background-image: linear-gradient(to right top, #051937, #0d142b, #0e0f1f, #0a0814, #020202); */ 
+  background: #212121; 
+
+  /* background-image: linear-gradient(to right top, #051937, #0d142b, #0e0f1f, #0a0814, #020202); */
  
 }
 
