@@ -5,7 +5,7 @@ function Button() {
   return (
     <>
         <div >
-           <button className='btn'> <a href='#'> join Now</a></button>
+        <a href='https://chat.whatsapp.com/Bv6PpNcdN26JlBIfYLOGrz' target='_blank'><button className='btn'> <a href='https://chat.whatsapp.com/Bv6PpNcdN26JlBIfYLOGrz' target='_blank'> join Now</a> </button></a>
         </div>
     </>
   )

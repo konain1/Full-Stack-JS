@@ -23,7 +23,7 @@ function Home() {
 
     <Group_therapy/>
 
-    <Footer/>
+    {/* <Footer/> */}
 
 
 
