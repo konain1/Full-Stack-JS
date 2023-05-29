@@ -4,17 +4,17 @@ export const MenuItems = [
     {
         title:'Home',
         cName:'nav-links',
-        url:'#'
+        url:'/'
     },
     {
         title:'Contact',
         cName:'nav-links',
-        url:'#'
+        url:'/contact'
     },
     {
         title:'CoursePage',
         cName:'nav-links',
-        url:'#'
+        url:'/coursepage'
     },{
         title:'mobie-view',
         cName:'nav-links-mobile',

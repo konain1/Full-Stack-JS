@@ -2,6 +2,7 @@ import React from 'react'
 import {MenuItems} from "./Menu"
 import './Nav.scss'
 import {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Nav() {
@@ -27,8 +28,8 @@ function Nav() {
         <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
             {MenuItems.map((items,index)=>{
                 return (
-                    <li key={index}> <a href={items.url} className={items.cName} > {items.title} </a></li>
-                )
+                    <li exact key={index}> <Link href={items.url} className={items.cName} to={items.url}>  {items.title} </Link> </li>
+                )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
             })}
         </ul>
 
