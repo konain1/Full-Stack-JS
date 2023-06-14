@@ -1,0 +1,24 @@
+
+.course-navbar {
+    display: flex;
+    
+    justify-content: flex-start;
+}
+
+.course-navbar-innerdiv  ul  {
+    display: flex;
+    justify-content:end;
+    /* border: 1px solid black;  */
+
+}
+.course-navbar-innerdiv ul li  {
+
+padding: 0px 30px;
+}
+
+.course-navbar-innerdiv{
+   margin: 0px 300px;
+    /* background-color: green;  */
+    display: flex;
+   
+}

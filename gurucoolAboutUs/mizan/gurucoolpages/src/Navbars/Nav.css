@@ -1,0 +1,22 @@
+.custome-nav {
+    display:flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.left-navbar{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* border: 1px solid black; */
+}
+.custome-nav ul {
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    padding: 0px 210px;
+}
+.custome-nav ul li {
+    
+    padding:0px 20px;
+}

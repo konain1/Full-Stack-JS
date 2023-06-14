@@ -1,0 +1,17 @@
+
+
+.course-cont{
+    display: flex;   
+    /* border: 1px solid black; */
+    margin: 0px auto;   
+    flex-direction: column;
+    justify-content: start;
+    width: 60%;
+    
+}
+.heading {
+    /* background-color: green;/ */
+    display: flex;
+    padding: 10px 10px;
+    justify-content: start;
+}
