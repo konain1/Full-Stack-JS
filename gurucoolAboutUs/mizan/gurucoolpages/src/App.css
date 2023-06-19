@@ -5,6 +5,9 @@
 *{
   list-style:none;
 }
+a {
+  text-decoration: none;
+}
 
 .App-logo {
   height: 40vmin;

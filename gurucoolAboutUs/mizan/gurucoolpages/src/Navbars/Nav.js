@@ -2,6 +2,7 @@ import React from 'react'
 import {NavbarItems} from './Navdata.js';
 import { useState } from "react";
 import Menu from '../MenuHover/Menu.js';
+import { Link } from 'react-router-dom';
 
 import './Nav.css'
 
@@ -42,7 +43,7 @@ function Navbar() {
         <ul >
         {
         NavbarItems.slice(0,2).map((items,index)=>
-          index === 1 ? <li key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >{items.title} 
+          index === 1 ? <li key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} > <Link> {items.title} </Link> 
           {<Menu custom={customClass}/>}
 
           </li> :  <li key={index} >{items.title}</li>
@@ -57,7 +58,7 @@ function Navbar() {
         <ul>
         {
         NavbarItems.slice(2).map((items,index)=>{
-          return <li key={index}>{items.title }</li>
+          return <li key={index}> <Link to={items.imageUrl} > {items.title }</Link> </li>
         })
       }
         </ul>

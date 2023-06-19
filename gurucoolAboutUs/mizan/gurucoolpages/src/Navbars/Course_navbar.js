@@ -1,7 +1,8 @@
 import React from 'react'
 import {CourseNavItems } from './Cousenavdata'
 import './Course_navbar.css'
-
+import { Link,Routes,Route } from 'react-router-dom'
+import Testpage from '../NeetTest/Testpage'
 
 function Course_navbar() {
   return (
@@ -9,10 +10,15 @@ function Course_navbar() {
     <div className='course-navbar-innerdiv'>
         <ul>
             {CourseNavItems.map((items,index)=>{
-                return <li>{items.title}</li>
-               
+
+                return <>
+                         
+
+                 <li><Link to={items.imageUrl}>{items.title}</Link></li>
+                 </>
             })}
         </ul>
+        
     </div>
     
       

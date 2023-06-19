@@ -1,4 +1,4 @@
-import { tests } from "./Test_data";
+// import { tests } from "./Test_data";
 import './Course_card_box.css'
 import Buttons from "./Buttons";
 import Menu from "../MenuHover/Menu";
@@ -6,13 +6,13 @@ import Menu from "../MenuHover/Menu";
 
 
 
-function Course_card_box() {
+function Course_card_box(props) {
 
 
   return (
     <div className="course-card-box">
    
-      {tests.map((items, index) => {
+      {props.tests.map((items, index) => {
         return (
           <>
             {" "}
