@@ -1,14 +1,17 @@
-import React from "react";
 import { tests } from "./Test_data";
 import './Course_card_box.css'
 import Buttons from "./Buttons";
+import Menu from "../MenuHover/Menu";
 
 
 
 
 function Course_card_box() {
+
+
   return (
     <div className="course-card-box">
+   
       {tests.map((items, index) => {
         return (
           <>
@@ -21,11 +24,13 @@ function Course_card_box() {
             <div className="questions-quntity">{items.Questions} </div>
             <div className="time">{items.Time}</div>
 
-            <div className="live"> {items.Live}</div>
+            {/* <div className="live"> {items.Live}</div> */}
+            <Buttons Live={items.Live}/>
 
-            {/* <div className="btn">{<Buttons details={items.buttonDetails}/>}</div> */}
 
-            <div className="btn">{items.buttonDetails}</div>
+           <Buttons details={items.buttonDetails}/>
+
+            {/* <div className="btn">{items.buttonDetails}</div> */}
 
             </div>
           </>

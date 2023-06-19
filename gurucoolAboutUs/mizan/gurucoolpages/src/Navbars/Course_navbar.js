@@ -10,6 +10,7 @@ function Course_navbar() {
         <ul>
             {CourseNavItems.map((items,index)=>{
                 return <li>{items.title}</li>
+               
             })}
         </ul>
     </div>
