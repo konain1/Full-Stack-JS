@@ -6,6 +6,7 @@
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0px auto;
     width: 80%;
 }
 .cards {
