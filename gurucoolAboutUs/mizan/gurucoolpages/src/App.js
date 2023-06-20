@@ -20,7 +20,6 @@ function App() {
      <Course_navbar/>
      <Routes>
           <Route path='/testpage' element={<Testpage/>  } ></Route>
-          {/* <Route path='/course-cont' element={<Course_cont/>}></Route> */}
           <Route path='/neetprep' element={<NeetPrep/>}></Route>
 
           

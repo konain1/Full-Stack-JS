@@ -8,21 +8,25 @@ function Buttons(props) {
 
     switch(text) {
 
-      case 'live': return 'live';
-      case 'test' : return 'test';
+      case 'Live on oct 15,2023': return 'live';
+      case 'Attempt Now Practice Mode' : return 'Practice';
+      case 'Download PDF' : return 'pdf';
+      case  'Attempt Now Test Mode' : return 'testMode';
       default: return 'btn'
     }
+   
+
   }
+  const customClassBtn = 'customeClassBtn'
   return (
-    <div className= {generateCustomClassName(props.text)}>
+
+    <div className={generateCustomClassName(props.text)}  >
     
         {
             props.text && <div> {props.text}</div>
+            
         }
-          
-        {/* <div className='btn-text'>
-            <span>{props.text}</span>
-        </div> */}
+{/* {console.log(props.text)} */}
       
     </div>
   )

@@ -2,15 +2,16 @@
 
 .course-cont{
     display: flex;   
-    /* border: 1px solid black; */
-    margin: 0px auto;   
+    border: 1px solid black;
+    /* margin: 0px auto;    */
     flex-direction: column;
+    align-items: center;
     justify-content: start;
     width: 80%;
     
 }
 .heading {
-    /* background-color: green; */
+    background-color: green;
     display: flex;
     padding: 10px 40px;
     /* margin: 0px auto; */
@@ -19,6 +20,5 @@
 .courseBox *{
     display: flex;
     justify-content: center;
-    /* margin: 0px auto;    */
     align-items: center;
 }

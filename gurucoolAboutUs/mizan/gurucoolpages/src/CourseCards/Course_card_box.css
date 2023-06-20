@@ -1,10 +1,12 @@
 
 
 .course-card-box{
-    /* border:1px solid black;   */
+    border:1px solid black;  
     display: flex ;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
 }
 .cards {
     border: 1px solid black;

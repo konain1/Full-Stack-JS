@@ -1,6 +1,37 @@
+
+   
    .live {
-    background-color: #6c757d;
+    background-color: #38453a;
     color: #fff;
     padding: 2px 10px;
     border-radius: 5px;
+   }
+   .testMode {
+      background-color: #d5eb29;
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 5px;
+   }
+   .btn {
+      background-color: rgb(16, 31, 16);
+      color: white;
+      padding: 2px 20px;
+      border-radius: 5px;
+      
+   }
+   .pdf {
+    background-color: aqua;
+    color: black;
+    /* padding: 5px 20px;
+     */
+     width: 80%;
+     height: 20px;
+      border-radius: 5px;
+   }
+   .Practice{
+      background-color: rgb(33, 160, 33);
+      color: white;
+      padding: 2px 20px;
+      border-radius: 5px;
+      
    }

@@ -17,13 +17,9 @@ function Course_cont(props) {
     </div>
  
     <div className='courseBox'>
-    {props.elem === tests ? <Course_card_box val={Neet_tests} /> : <Course_card_box val={tests} ></Course_card_box>}
+    {props.elem === tests ? <Course_card_box val={tests} /> : <Course_card_box val={Neet_tests} ></Course_card_box>}
      </div>
-
-   
-    
-
-      
+{console.log(props.elem)}
     </div>
   )
 }

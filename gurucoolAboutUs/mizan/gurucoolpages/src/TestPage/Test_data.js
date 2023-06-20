@@ -6,6 +6,7 @@ export const tests = [
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
         button:{
+            Live:'Live on oct 15,2023',
             buttonDetails:'View Syllabus'
         }
          
@@ -17,6 +18,7 @@ export const tests = [
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
         button:{
+            Live:'Live on oct 15,2023',
             buttonDetails:'View Syllabus'
         }
          
@@ -28,6 +30,7 @@ export const tests = [
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
         button:{
+            Live:'Live on oct 15,2023',
             buttonDetails:'View Syllabus'
         }
          
@@ -39,6 +42,7 @@ export const tests = [
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
         button:{
+            Live:'Live on oct 15,2023',
             buttonDetails:'View Syllabus'
         }
          
@@ -50,6 +54,7 @@ export const tests = [
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
         button:{
+            Live:'Live on oct 15,2023',
             buttonDetails:'View Syllabus'
         }
          
@@ -61,6 +66,8 @@ export const tests = [
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
         button:{
+            Live:'Live on oct 15,2023',
+
             buttonDetails:'View Syllabus'
         }
          
