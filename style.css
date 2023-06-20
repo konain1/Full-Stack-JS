@@ -1,0 +1,52 @@
+.container{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.headerDiv{
+     /* border: 1px solid red; */
+}
+
+.heading{
+    /* background-color: aqua; */
+}
+
+.desc{
+    border: 1px solid black;
+    /* background-color: yellow; */
+    width:1200px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card {
+    width: 400px;
+    /* height: 160px; */
+   display: flex;
+   /* background-color: green; */
+margin: 10px 10px;
+
+
+}
+.icon {
+width: 50px;
+}
+.text {
+    overflow: hidden;
+    width: 200px;
+    /* border: 1px solid black; */
+
+}
+
+.upper {
+    width: 100%;
+    display: flex;
+}
+.lower {
+    width: 100%;
+    display: flex;
+}
