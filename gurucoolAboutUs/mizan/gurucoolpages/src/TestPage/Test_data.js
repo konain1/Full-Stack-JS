@@ -5,8 +5,10 @@ export const tests = [
         Questions:' Questions 200',
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
-        buttonDetails:'View Syllabus'
-        
+        button:{
+            buttonDetails:'View Syllabus'
+        }
+         
     },
     {
         testTitle:'NEET Level Test',
@@ -14,7 +16,10 @@ export const tests = [
         Questions:' Questions 200',
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
-        buttonDetails:'View Syllabus'
+        button:{
+            buttonDetails:'View Syllabus'
+        }
+         
     },
     {
         testTitle:'NEET Level Test',
@@ -22,7 +27,10 @@ export const tests = [
         Questions:' Questions 200',
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
-        buttonDetails:'View Syllabus'
+        button:{
+            buttonDetails:'View Syllabus'
+        }
+         
     },
     {
         testTitle:'NEET Level Test',
@@ -30,7 +38,10 @@ export const tests = [
         Questions:' Questions 200',
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
-        buttonDetails:'View Syllabus'
+        button:{
+            buttonDetails:'View Syllabus'
+        }
+         
     },
     {
         testTitle:'NEET Level Test',
@@ -38,7 +49,10 @@ export const tests = [
         Questions:' Questions 200',
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
-        buttonDetails:'View Syllabus'
+        button:{
+            buttonDetails:'View Syllabus'
+        }
+         
     },
     {
         testTitle:'NEET Level Test',
@@ -46,6 +60,9 @@ export const tests = [
         Questions:' Questions 200',
         Time:'Time 200 minutes',
         Live:'Live on oct 15,2023',
-        buttonDetails:'View Syllabus'
+        button:{
+            buttonDetails:'View Syllabus'
+        }
+         
     }
 ]

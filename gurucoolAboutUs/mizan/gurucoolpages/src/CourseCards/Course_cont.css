@@ -6,12 +6,19 @@
     margin: 0px auto;   
     flex-direction: column;
     justify-content: start;
-    width: 60%;
+    width: 80%;
     
 }
 .heading {
-    /* background-color: green;/ */
+    /* background-color: green; */
     display: flex;
-    padding: 10px 10px;
+    padding: 10px 40px;
+    /* margin: 0px auto; */
     justify-content: start;
+}
+.courseBox *{
+    display: flex;
+    justify-content: center;
+    /* margin: 0px auto;    */
+    align-items: center;
 }

@@ -46,7 +46,7 @@ function Navbar() {
           index === 1 ? <li key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} > <Link> {items.title} </Link> 
           {<Menu custom={customClass}/>}
 
-          </li> :  <li key={index} >{items.title}</li>
+          </li> :  <li key={index}>{items.title}</li>
           
         )
       }

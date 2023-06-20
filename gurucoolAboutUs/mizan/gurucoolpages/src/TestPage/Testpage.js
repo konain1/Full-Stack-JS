@@ -1,14 +1,17 @@
 import React from 'react'
 import Course_cont from '../CourseCards/Course_cont'
-import { tests } from '../CourseCards/Test_data'
 import Course_card_box from '../CourseCards/Course_card_box'
-
+import { Neet_tests } from '../NeetTest/Neetdata'
+import { HeadingsItems } from '../CourseCards/Headings'
+import { tests } from './Test_data'
+    
 
 function Testpage() {
   return (
     <div >
-      <Course_cont/>
+      <Course_cont test={Neet_tests} x={HeadingsItems[0].title}/>
       {/* <Course_card_box/>     */}
+      <h1>Testpage</h1>
       
     </div>
   )

@@ -7,12 +7,12 @@ export const CourseNavItems = [
     },
     {
         title:'NEETprep Test Series',
-        imageUrl:'/course-cont',
+        imageUrl:'/testpage',
         Cname:'course-nav-links'
     },
     {
         title:'NEET',
-        imageUrl:'/Testpage',
+        imageUrl:'/neetprep',
         Cname:'course-nav-links'
     },
     {

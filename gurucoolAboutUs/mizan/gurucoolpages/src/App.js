@@ -4,7 +4,9 @@ import Course_navbar from './Navbars/Course_navbar';
 import Nav from './Navbars/Nav';
 import {Routes,Route} from 'react-router-dom';
 
-import Testpage from './NeetTest/Testpage';
+import NeetPrep from './NeetTest/NeetPrep';
+import Testpage from './TestPage/Testpage';
+
 
 
 
@@ -17,8 +19,11 @@ function App() {
      <Nav/>
      <Course_navbar/>
      <Routes>
-          <Route path='/Testpage' element={<Testpage/>  } ></Route>
-          <Route path='/course-cont' element={<Course_cont/>}></Route>
+          <Route path='/testpage' element={<Testpage/>  } ></Route>
+          {/* <Route path='/course-cont' element={<Course_cont/>}></Route> */}
+          <Route path='/neetprep' element={<NeetPrep/>}></Route>
+
+          
 
         </Routes>
     </div>

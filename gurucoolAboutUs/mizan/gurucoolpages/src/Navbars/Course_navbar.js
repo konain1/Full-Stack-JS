@@ -2,7 +2,7 @@ import React from 'react'
 import {CourseNavItems } from './Cousenavdata'
 import './Course_navbar.css'
 import { Link,Routes,Route } from 'react-router-dom'
-import Testpage from '../NeetTest/Testpage'
+import Testpage from '../TestPage/Testpage'
 
 function Course_navbar() {
   return (
