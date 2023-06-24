@@ -29,7 +29,7 @@ function Course_card_box(props) {
 
          
            
-           {btnKeys?.map((btn,key) => <Buttons  text={items.button[btn]}/>  )}
+           {btnKeys?.map((btn,key) => <Buttons  text={items.button[btn]}/>  ) }
 
           
 

@@ -6,6 +6,7 @@ import {Routes,Route} from 'react-router-dom';
 
 import NeetPrep from './NeetTest/NeetPrep';
 import Testpage from './TestPage/Testpage';
+import QuestionPage from './QuestionPage/QuestionPage';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           
 
         </Routes>
+        <QuestionPage/>
     </div>
   );
 }
