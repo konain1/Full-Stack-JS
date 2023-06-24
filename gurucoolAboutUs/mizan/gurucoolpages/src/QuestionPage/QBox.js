@@ -1,4 +1,7 @@
 import React from 'react'
+import './Qbox.css'
+
+
 
 function QBox(props) {
   return (
@@ -13,6 +16,7 @@ function QBox(props) {
         return(
         <div className='Qbox'>
     <div className='subject'> {item.subject}</div>
+    <div className='serialNo'>{item.serialNo}</div>
 
     <div className='Qdiv'>
     <div className='Thequestion'>

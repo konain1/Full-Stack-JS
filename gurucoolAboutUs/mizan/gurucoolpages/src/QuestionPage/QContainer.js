@@ -11,7 +11,7 @@ function QContainer() {
 
   const QuestionData = useContext(Q)
 
-  console.log(useContext(Q))
+  // console.log(useContext(Q))
 
   return (
     <div className='Qcontainer'>

@@ -1,0 +1,47 @@
+
+
+.Qbox{
+    border: 1px solid black;
+}
+
+.subject{
+    border: 1px solid black;
+    padding: 20px ;
+}
+.serialNo{
+    border: 1px solid black;
+    padding: 10px ;
+    display: flex;
+    justify-content: start;
+
+}
+
+.Thequestion{
+    border: 1px solid black;
+    padding: 10px ;
+    display: flex;
+    justify-content: start;
+}
+.options{
+    border: 1px solid black;
+    padding: 10px ;
+    display: flex;
+    justify-content: start;
+flex-direction: column;    
+}
+.option{
+    display: flex;
+    justify-content: start;
+    border: 1px solid black;
+    padding: 0px 20px;
+        
+}
+
+.option span {
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-weight: 700;
+    padding: 5px 5px;
+}
