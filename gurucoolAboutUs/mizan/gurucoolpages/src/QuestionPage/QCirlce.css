@@ -2,7 +2,18 @@
 
 .QCircles{
     width: 30%;
-
+background-color: yellow;
     border:1px solid black;
 
+}
+.result {
+    margin-top: 630px;
+}
+.result {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+.result p {
+    display: inline;
 }

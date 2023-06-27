@@ -5,6 +5,7 @@ import './QContainer.css'
 
 import { useContext } from 'react'
 import {Q} from './QuestionPage'
+import QCircles from './QCircles'
 
 
 function QContainer() {
