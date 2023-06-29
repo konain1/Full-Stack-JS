@@ -24,11 +24,11 @@ function QContainer() {
     <div className='Qcontainer'>
 
 
-      {
+      {/* {
         subjects.map((item,key)=>{
     return <h1>{item}</h1> 
   })
-      }
+      } */}
      
 
       <QTestField data={QuestionData} />
