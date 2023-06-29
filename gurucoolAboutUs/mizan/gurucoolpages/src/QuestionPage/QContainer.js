@@ -1,12 +1,12 @@
 import React from 'react'
 import QBox from './QBox'
-
+import {subjects} from './Subjects'
 import './QContainer.css'
 
 import { useContext } from 'react'
 import {Q} from './QuestionPage'
 import QCircles from './QCircles'
-
+import QTestField from './QTestField'
 
 function QContainer() {
 
@@ -14,12 +14,25 @@ function QContainer() {
 
   // console.log(useContext(Q))
 
+ 
+  
+  
+
+
   return (
+   
     <div className='Qcontainer'>
 
 
-      <h1>container </h1>
-    <QBox data={QuestionData }/>
+      {
+        subjects.map((item,key)=>{
+    return <h1>{item}</h1> 
+  })
+      }
+     
+
+      <QTestField data={QuestionData} />
+    {/* <QBox data={QuestionData}/> */}
   
 
 
