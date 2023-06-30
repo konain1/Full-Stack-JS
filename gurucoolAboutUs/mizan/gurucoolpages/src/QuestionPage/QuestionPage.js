@@ -7,7 +7,7 @@ import {QuestionData} from './DataCenter/DataCeter'
 
 
 export const Q = createContext();
-console.log(QuestionData);
+// console.log(QuestionData);
 
 function QuestionPage() {
 

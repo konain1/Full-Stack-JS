@@ -8,7 +8,7 @@ const QuestionData = useContext(Q)
 
   return (
     <div className='subject'>
-    <QBox data={QuestionData} />
+    <QBox data={props.data} />
     </div>
   )
 }

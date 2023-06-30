@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import QBox from './QBox'
-import {subjects} from './Subjects'
+// import {subjects} from './Subjects'
 import './QContainer.css'
 
 import { useContext } from 'react'
@@ -14,24 +14,36 @@ function QContainer() {
 
   // console.log(useContext(Q))
 
+  const [sub,setSub] = useState('')
  
   
+//  const subjects = ["physics","mathamatics","chemistry","biology"]
+const selectHandle = (e) =>{
+  setSub(e);
+
+}
+
+
   
+  const getData = QuestionData.filter((item,key)=>{
+    return item.subject == sub
+  })
+ 
+
+
 
 
   return (
    
-    <div className='Qcontainer'>
+
+    <div className='Qcontainer'>  
+
+    <button onClick={(e)=>selectHandle(e.target.innerText)} > physics</button>
+    <button onClick={(e)=>selectHandle(e.target.innerText)} > biology</button>
+    <button onClick={(e)=>selectHandle(e.target.innerText)} > math</button>
 
 
-      {/* {
-        subjects.map((item,key)=>{
-    return <h1>{item}</h1> 
-  })
-      } */}
-     
-
-      <QTestField data={QuestionData} />
+      <QTestField data={getData} />
     {/* <QBox data={QuestionData}/> */}
   
 

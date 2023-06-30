@@ -8,3 +8,6 @@
      display: none;
     }
 }
+.optionButton {
+    gap: 10px;
+}

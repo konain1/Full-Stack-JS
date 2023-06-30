@@ -5,8 +5,11 @@ import {Link} from 'react-router-dom'
 
 function OMR(props) {
 
+
     
   return (
+
+     
     <div className='omrSheet'>
     <div className='omrSheetArea'>
     
@@ -14,7 +17,7 @@ function OMR(props) {
         return(
             <div >
            
-            <button className='QNO'> <a href={`#${items.serialNo}`}> {items.serialNo}</a> </button>
+            <button key={key} className='QNO'> <a href={`#${items.serialNo}`}> {items.serialNo}</a> </button>
             </div>
         )
      })}

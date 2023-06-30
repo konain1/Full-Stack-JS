@@ -13,11 +13,12 @@ function QCircles(props) {
   const QuestionData = useContext(Q)
   // console.log(QuestionData)
 
+
   return (
     <div className='QCircles'>
       <h1>QCircles</h1>
 
-      <h1>{QuestionData.question}</h1>
+      {/* <h1>{QuestionData.question}</h1> */}
       <OMR data={QuestionData}/>
 
 
