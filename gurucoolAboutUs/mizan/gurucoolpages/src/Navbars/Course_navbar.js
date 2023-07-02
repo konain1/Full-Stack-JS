@@ -14,7 +14,7 @@ function Course_navbar() {
                 return <>
                          
 
-                 <li><Link to={items.imageUrl}>{items.title}</Link></li>
+                 <li key={index}><Link to={items.imageUrl}>{items.title}</Link></li>
                  </>
             })}
         </ul>

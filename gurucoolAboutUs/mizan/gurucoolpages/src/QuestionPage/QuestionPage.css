@@ -1,4 +1,4 @@
-
+/* 
 .QuestionPage {
     display: flex;
     border: 1px solid black;
@@ -7,4 +7,45 @@
     width: 80%;
     margin: 0px auto;
       
-}
+} */
+
+
+
+.QuestionPage {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .QuestionPage button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .QuestionPage button:hover {
+    background-color: #45a049;
+  }
+  
+  .QuestionPage .button-container {
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .QuestionPage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .QuestionPage button {
+      font-size: 14px;
+    }
+  }
+  

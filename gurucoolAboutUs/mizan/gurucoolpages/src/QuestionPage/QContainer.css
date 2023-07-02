@@ -1,4 +1,4 @@
-
+/* 
 
 .Qcontainer{
     width: 70%;
@@ -10,4 +10,19 @@
 }
 .optionButton {
     gap: 10px;
-}
+} */
+
+
+.Qcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .Qcontainer {
+      padding: 10px;
+    }
+  }
+  

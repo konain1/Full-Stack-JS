@@ -11,7 +11,7 @@ function QBox(props) {
         return (
           <div id={item.serialNo} className="Qbox">
             {/* <div className="subject"> {item.subject}</div> */}
-            <div className="serialNo">{item.serialNo}</div>
+            <div  className="serialNo">{item.serialNo}</div>
 
             <div className="Qdiv">
               <div id={item.serialNo} className="Thequestion" >{item.question}</div>

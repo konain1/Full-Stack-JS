@@ -5,6 +5,8 @@ import { Neet_tests } from '../NeetTest/Neetdata'
 import { HeadingsItems } from '../CourseCards/Headings'
 import { tests } from './Test_data'
 
+import './TestPage.css'
+
 function Testpage() {
   return (
     <div >

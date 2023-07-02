@@ -1,17 +1,36 @@
-import React from 'react'
-import QBox from './QBox'
-import { useContext } from 'react'
-import {Q} from './QuestionPage'
+// import React from 'react'
+// import QBox from './QBox'
+// import { useContext } from 'react'
+// import {Q} from './QuestionPage'
+
+// function QTestField(props) {
+// const QuestionData = useContext(Q)
+
+//   return (
+//     <div className='subject'>
+//     <QBox data={props.data} />
+//     </div>
+//   )
+// }
+
+
+// export default QTestField
+
+
+
+import React, { useContext } from 'react';
+import QBox from './QBox';
+import { Q } from './QuestionPage';
+import './QTestField.css'
 
 function QTestField(props) {
-const QuestionData = useContext(Q)
+  const QuestionData = useContext(Q);
 
   return (
     <div className='subject'>
-    <QBox data={props.data} />
+      <QBox data={props.data} />
     </div>
-  )
+  );
 }
 
-
-export default QTestField
+export default QTestField;
