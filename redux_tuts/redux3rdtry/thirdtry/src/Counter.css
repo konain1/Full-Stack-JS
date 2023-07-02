@@ -1,0 +1,59 @@
+/* Counter.css */
+
+.counter {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .counter-value {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .counter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .counter-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .counter-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  
+  @media screen and (max-width: 600px) {
+    /* Styles for screens with a maximum width of 600px */
+    .counter-value {
+      font-size: 24px;
+    }
+  
+    .counter-button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    /* Styles for screens with a maximum width of 400px */
+    .counter-value {
+      font-size: 20px;
+    }
+  
+    .counter-button {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+  
