@@ -1,16 +1,3 @@
-/* 
-
-.Qcontainer{
-    width: 70%;
-    height: 700px;
-    overflow-y: auto;
-    ::-webkit-scrollbar {
-     display: none;
-    }
-}
-.optionButton {
-    gap: 10px;
-} */
 
 
 .Qcontainer {
