@@ -1,0 +1,25 @@
+
+
+.btn {
+    background-color: aqua;
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    padding: 30px 30px;
+
+}
+
+.inputrange {
+    width: 100%;
+    height: 30px;
+    display: block;
+    border: 1px solid black;
+    margin: 110px 0px;
+
+}
+
+.para {
+    overflow: hidden;
+    display: flex;
+    height: 70px;
+}
