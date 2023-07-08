@@ -93,3 +93,6 @@
     /* background-color: #0056b3;  */
     margin: 20px 10px;
  }
+ .pageDisable{
+    opacity: 0;
+ }
