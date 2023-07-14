@@ -5,4 +5,6 @@ let a = {
     }
 }
 
+console.log('hi')
+
 module.exports = a;

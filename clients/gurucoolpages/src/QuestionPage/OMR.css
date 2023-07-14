@@ -1,0 +1,30 @@
+
+
+
+.omrSheet{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.omrSheetArea{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: yellowgreen;
+}
+.QNO{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: white;
+}
+

@@ -1,0 +1,46 @@
+
+
+.course-card-box{
+    border:1px solid black;  
+    display: flex ;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px auto;
+    width: 80%;
+}
+.cards {
+    border: 1px solid black;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+   
+}
+
+.upper-strip{
+    display: flex;
+    font-size: 22px;
+    /* background-color: aqua; */
+    padding:0px 30px;
+}
+
+.questions-quntity{
+    padding: 20px  0 10px 0;
+    font-size: 22px;
+}
+.time{
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+
+.btn {
+    /* border:1px solid black;   */
+    padding: 5px 100px;
+    margin: 10px;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: antiquewhite;
+}
