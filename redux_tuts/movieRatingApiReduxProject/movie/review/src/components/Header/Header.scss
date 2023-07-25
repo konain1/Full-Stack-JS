@@ -1,0 +1,16 @@
+
+
+@import "../../common/colors.scss";
+
+.Header{
+    background-color: $secondary-color;
+    height: 72px;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    color: $secondary-font;
+    font-size: 20px;
+}
