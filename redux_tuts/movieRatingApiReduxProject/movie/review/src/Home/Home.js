@@ -7,7 +7,7 @@ import {useDispatch} from 'react-redux'
 import { addMovies } from '../features/movies/movieSlice'
 
 function Home() {
-    let movietext = 'Harry'
+    let movietext = 'Mission Impossible'
     const dispatch =useDispatch();
 
     useEffect(()=>{
