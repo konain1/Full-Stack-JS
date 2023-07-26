@@ -20,7 +20,7 @@ function Home() {
             dispatch(addMovies(response.data))
         }
 
-        fetchMovies()
+        fetchMovies() 
         
     },[])
 
