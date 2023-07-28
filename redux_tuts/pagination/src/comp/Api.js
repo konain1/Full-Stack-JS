@@ -18,11 +18,12 @@ const [page,SetPoint] = useState(1)
         SetPoint(x+1)
 
     }
+    // not working as i wished
 
     console.log(page)
 
 
-    
+
   return (
     <div style={{display:'grid' }}>
       {
